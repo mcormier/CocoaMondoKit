@@ -1,0 +1,14 @@
+
+How to make an ibplugin that opens up properly in 
+Interface Builder when double clicked.
+-------------------------------------------------
+1. - Copy the dependent framework into 
+*.ibplugin/Contents/Resources
+2. - Clear the variable Dynamic Linking Install Name
+[LD_DYLIB_INSTALL_NAME]
+
+This will create an ibplugin that allows someone to
+download and double click to use it immediately.  Otherwise the
+plugin will not work unless a copy of the framework is
+located in /Library/Frameworks/.
+
