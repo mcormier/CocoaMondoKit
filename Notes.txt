@@ -12,3 +12,22 @@ download and double click to use it immediately.  Otherwise the
 plugin will not work unless a copy of the framework is
 located in /Library/Frameworks/.
 
+
+Referencing image files from within a framework
+--------------------------------------------------
+When referencing resources in a framework you cannot 
+use simple convenience methods such as this:
+
+[NSImage imageNamed:imgName];
+
+This is because the framework is a separate bundle 
+that is bundled within the application.  You must
+reference with code like this:
+
+NSBundle *bundle = [NSBundle bundleForClass:[BWTransparentButtonCell class]];
+buttonLeftN = [[NSImage alloc] initWithContentsOfFile:[bundle pathForImageResource:@"TransparentButtonLeftN.tiff"]];
+
+Where the class is the framework class contained within 
+the framework bundle.
+
+
