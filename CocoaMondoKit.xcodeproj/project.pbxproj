@@ -1,0 +1,697 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		53DF6901067E5B8E0090B5B0 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C056398708A954F8003078D8 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				53DF6903067E5B930090B5B0 /* PBXTargetDependency */,
+				53DF6905067E5B930090B5B0 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		13F8B89007B43554008AE28D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		54D33B2906778E3300C9C163 /* CocoaMondoKitView.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 54D33B2806778E3300C9C163 /* CocoaMondoKitView.classdescription */; };
+		8D1AC96C0486D14A00FE50C9 /* CocoaMondoKitView.classdescription in Sources */ = {isa = PBXBuildFile; fileRef = 0259C577FE90428111CA0C5A /* CocoaMondoKitView.classdescription */; settings = {ATTRIBUTES = (); }; };
+		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */; };
+		A506C60210B0588E00EAD3C2 /* CocoaMondoKitInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 0259C57BFE90428111CA0C5A /* CocoaMondoKitInspector.h */; };
+		A506C64310B05B1800EAD3C2 /* CocoaMondoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
+		A506C70A10B21D6C00EAD3C2 /* MondoTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A506C70610B21D6C00EAD3C2 /* MondoTextField.h */; };
+		A506C70B10B21D6C00EAD3C2 /* MondoTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A506C70710B21D6C00EAD3C2 /* MondoTextField.m */; };
+		A506C70C10B21D6C00EAD3C2 /* MondoTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A506C70810B21D6C00EAD3C2 /* MondoTextFieldCell.h */; };
+		A506C70D10B21D6C00EAD3C2 /* MondoTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A506C70910B21D6C00EAD3C2 /* MondoTextFieldCell.m */; };
+		A506C70F10B21D7800EAD3C2 /* mondoZoomPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A506C70E10B21D7800EAD3C2 /* mondoZoomPanel.xib */; };
+		A506C72A10B21D9400EAD3C2 /* MondoZoomWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = A506C72810B21D9400EAD3C2 /* MondoZoomWindowController.h */; };
+		A506C72B10B21D9400EAD3C2 /* MondoZoomWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A506C72910B21D9400EAD3C2 /* MondoZoomWindowController.m */; };
+		A506C73010B21DD700EAD3C2 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = A506C72F10B21DD700EAD3C2 /* SynthesizeSingleton.h */; };
+		A506C73310B21DE200EAD3C2 /* NSWindow-NoodleEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = A506C73110B21DE200EAD3C2 /* NSWindow-NoodleEffects.h */; };
+		A506C73410B21DE200EAD3C2 /* NSWindow-NoodleEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A506C73210B21DE200EAD3C2 /* NSWindow-NoodleEffects.m */; };
+		A506C73E10B21E5800EAD3C2 /* zoomFieldMini_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = A506C73810B21E5800EAD3C2 /* zoomFieldMini_Pressed.png */; };
+		A506C73F10B21E5800EAD3C2 /* zoomFieldMini.png in Resources */ = {isa = PBXBuildFile; fileRef = A506C73910B21E5800EAD3C2 /* zoomFieldMini.png */; };
+		A506C74010B21E5800EAD3C2 /* zoomFieldRegular_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = A506C73A10B21E5800EAD3C2 /* zoomFieldRegular_Pressed.png */; };
+		A506C74110B21E5800EAD3C2 /* zoomFieldRegular.png in Resources */ = {isa = PBXBuildFile; fileRef = A506C73B10B21E5800EAD3C2 /* zoomFieldRegular.png */; };
+		A506C74210B21E5800EAD3C2 /* zoomFieldSmall_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = A506C73C10B21E5800EAD3C2 /* zoomFieldSmall_Pressed.png */; };
+		A506C74310B21E5800EAD3C2 /* zoomFieldSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = A506C73D10B21E5800EAD3C2 /* zoomFieldSmall.png */; };
+		A506C74D10B21FA500EAD3C2 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A506C74A10B21F9A00EAD3C2 /* Carbon.framework */; };
+		A506C80F10B2207F00EAD3C2 /* MondoTextFieldIBIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A506C80E10B2207F00EAD3C2 /* MondoTextFieldIBIcon.png */; };
+		A506C82210B2235200EAD3C2 /* MondoTextField.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = A506C82110B2235200EAD3C2 /* MondoTextField.classdescription */; };
+		A54992D310B860A3002DB989 /* InterfaceBuilderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */; };
+		A54992E210B861F2002DB989 /* CocoaMondoKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
+		C059ACDD0A49E0A20079D97B /* CocoaMondoKitView.h in Headers */ = {isa = PBXBuildFile; fileRef = C059ACDB0A49E0A20079D97B /* CocoaMondoKitView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C059ACDE0A49E0A20079D97B /* CocoaMondoKitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C059ACDC0A49E0A20079D97B /* CocoaMondoKitView.m */; };
+		C08787290A49DE9A00E9B151 /* CocoaMondoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* CocoaMondoKit.m */; };
+		C0A47C500A523B730004BDC3 /* CocoaMondoKitInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05B20D80A48CB530099B9E5 /* CocoaMondoKitInspector.xib */; };
+		D1AEDE470A6C289C0010C343 /* CocoaMondoKitLibrary.nib in Resources */ = {isa = PBXBuildFile; fileRef = D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53DF6902067E5B930090B5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = CocoaMondoKit;
+		};
+		53DF6904067E5B930090B5B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
+			remoteInfo = CocoaMondoKitFramework;
+		};
+		A54992DA10B86195002DB989 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */;
+			remoteInfo = CocoaMondoKitFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A54992D910B8615F002DB989 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A54992E210B861F2002DB989 /* CocoaMondoKit.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0259C576FE90428111CA0C5A /* CocoaMondoKit.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = CocoaMondoKit.m; path = src/Plugin/CocoaMondoKit.m; sourceTree = "<group>"; };
+		0259C577FE90428111CA0C5A /* CocoaMondoKitView.classdescription */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.ibClassDescription; name = CocoaMondoKitView.classdescription; path = src/Plugin/CocoaMondoKitView.classdescription; sourceTree = "<group>"; };
+		0259C57AFE90428111CA0C5A /* CocoaMondoKit.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CocoaMondoKit.h; path = src/Plugin/CocoaMondoKit.h; sourceTree = "<group>"; };
+		0259C57BFE90428111CA0C5A /* CocoaMondoKitInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CocoaMondoKitInspector.h; path = src/Plugin/CocoaMondoKitInspector.h; sourceTree = "<group>"; };
+		13F8B88807B434F6008AE28D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		13F8B88907B434F6008AE28D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		13F8B88A07B434F6008AE28D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32DBCF980370C29C00C91783 /* CocoaMondoKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaMondoKit_Prefix.pch; sourceTree = "<group>"; };
+		53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaMondoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DF68FE067E5B5A0090B5B0 /* CocoaMondoKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaMondoKit-Info.plist"; sourceTree = "<group>"; };
+		54D33B2806778E3300C9C163 /* CocoaMondoKitView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = CocoaMondoKitView.classdescription; path = src/Plugin/CocoaMondoKitView.classdescription; sourceTree = "<group>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1AC9740486D14A00FE50C9 /* CocoaMondoKit.ibplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaMondoKit.ibplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1AC97B0486D23100FE50C9 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A506C70610B21D6C00EAD3C2 /* MondoTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoTextField.h; path = src/mondoTextField/MondoTextField.h; sourceTree = "<group>"; };
+		A506C70710B21D6C00EAD3C2 /* MondoTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoTextField.m; path = src/mondoTextField/MondoTextField.m; sourceTree = "<group>"; };
+		A506C70810B21D6C00EAD3C2 /* MondoTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoTextFieldCell.h; path = src/mondoTextField/MondoTextFieldCell.h; sourceTree = "<group>"; };
+		A506C70910B21D6C00EAD3C2 /* MondoTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoTextFieldCell.m; path = src/mondoTextField/MondoTextFieldCell.m; sourceTree = "<group>"; };
+		A506C70E10B21D7800EAD3C2 /* mondoZoomPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = mondoZoomPanel.xib; path = src/mondoTextField/mondoZoomPanel.xib; sourceTree = "<group>"; };
+		A506C72810B21D9400EAD3C2 /* MondoZoomWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoZoomWindowController.h; path = src/mondoTextField/MondoZoomWindowController.h; sourceTree = "<group>"; };
+		A506C72910B21D9400EAD3C2 /* MondoZoomWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoZoomWindowController.m; path = src/mondoTextField/MondoZoomWindowController.m; sourceTree = "<group>"; };
+		A506C72F10B21DD700EAD3C2 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SynthesizeSingleton.h; path = src/mondoTextField/cocoawithlove.com/SynthesizeSingleton.h; sourceTree = "<group>"; };
+		A506C73110B21DE200EAD3C2 /* NSWindow-NoodleEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSWindow-NoodleEffects.h"; path = "src/mondoTextField/noodlesoft.com/NSWindow-NoodleEffects.h"; sourceTree = "<group>"; };
+		A506C73210B21DE200EAD3C2 /* NSWindow-NoodleEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSWindow-NoodleEffects.m"; path = "src/mondoTextField/noodlesoft.com/NSWindow-NoodleEffects.m"; sourceTree = "<group>"; };
+		A506C73810B21E5800EAD3C2 /* zoomFieldMini_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldMini_Pressed.png; path = src/mondoTextField/zoomFieldMini_Pressed.png; sourceTree = "<group>"; };
+		A506C73910B21E5800EAD3C2 /* zoomFieldMini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldMini.png; path = src/mondoTextField/zoomFieldMini.png; sourceTree = "<group>"; };
+		A506C73A10B21E5800EAD3C2 /* zoomFieldRegular_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldRegular_Pressed.png; path = src/mondoTextField/zoomFieldRegular_Pressed.png; sourceTree = "<group>"; };
+		A506C73B10B21E5800EAD3C2 /* zoomFieldRegular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldRegular.png; path = src/mondoTextField/zoomFieldRegular.png; sourceTree = "<group>"; };
+		A506C73C10B21E5800EAD3C2 /* zoomFieldSmall_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldSmall_Pressed.png; path = src/mondoTextField/zoomFieldSmall_Pressed.png; sourceTree = "<group>"; };
+		A506C73D10B21E5800EAD3C2 /* zoomFieldSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldSmall.png; path = src/mondoTextField/zoomFieldSmall.png; sourceTree = "<group>"; };
+		A506C74A10B21F9A00EAD3C2 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		A506C80E10B2207F00EAD3C2 /* MondoTextFieldIBIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MondoTextFieldIBIcon.png; path = src/Plugin/images/MondoTextFieldIBIcon.png; sourceTree = "<group>"; };
+		A506C82110B2235200EAD3C2 /* MondoTextField.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = MondoTextField.classdescription; path = src/Plugin/MondoTextField.classdescription; sourceTree = "<group>"; };
+		C044829E0C3328F4006E818F /* CocoaMondoKitViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = CocoaMondoKitViewIntegration.m; path = src/Plugin/CocoaMondoKitViewIntegration.m; sourceTree = "<group>"; };
+		C059ACDB0A49E0A20079D97B /* CocoaMondoKitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaMondoKitView.h; path = src/CocoaMondoKitView.h; sourceTree = "<group>"; };
+		C059ACDC0A49E0A20079D97B /* CocoaMondoKitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CocoaMondoKitView.m; path = src/CocoaMondoKitView.m; sourceTree = "<group>"; };
+		C05B20D80A48CB530099B9E5 /* CocoaMondoKitInspector.xib */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file.xib; name = CocoaMondoKitInspector.xib; path = English.lproj/CocoaMondoKitInspector.xib; sourceTree = "<group>"; };
+		C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = /Developer/Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = "<absolute>"; };
+		D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = CocoaMondoKitLibrary.nib; path = English.lproj/CocoaMondoKitLibrary.nib; sourceTree = "<group>"; };
+		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53DF68FB067E5B5A0090B5B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13F8B89007B43554008AE28D /* Cocoa.framework in Frameworks */,
+				A506C74D10B21FA500EAD3C2 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96E0486D14A00FE50C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
+				A506C64310B05B1800EAD3C2 /* CocoaMondoKit.framework in Frameworks */,
+				A54992D310B860A3002DB989 /* InterfaceBuilderKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0259C574FE90428111CA0C5A /* CocoaMondoKit */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF9E0370C38000C91783 /* Plugin */,
+				54D33B2C06778E4400C9C163 /* Framework */,
+				0259C582FE90428111CA0C5A /* Resources */,
+				1ED78706FE9D4A0611CA0C5A /* Products */,
+				2E58F364FFB232C311CA0CBA /* Frameworks */,
+			);
+			name = CocoaMondoKit;
+			sourceTree = "<group>";
+		};
+		0259C582FE90428111CA0C5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A506C73610B21E2B00EAD3C2 /* images */,
+				A506C70E10B21D7800EAD3C2 /* mondoZoomPanel.xib */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+				53DF68FE067E5B5A0090B5B0 /* CocoaMondoKit-Info.plist */,
+				8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		131E8FE8067F80F40006E0CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A506C80D10B2206A00EAD3C2 /* images */,
+				D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */,
+				C05B20D80A48CB530099B9E5 /* CocoaMondoKitInspector.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		13F8B6FD07B43410008AE28D /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
+				C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */,
+				A506C74A10B21F9A00EAD3C2 /* Carbon.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		13F8B70407B43425008AE28D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13F8B88807B434F6008AE28D /* AppKit.framework */,
+				13F8B88907B434F6008AE28D /* CoreData.framework */,
+				13F8B88A07B434F6008AE28D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1ED78706FE9D4A0611CA0C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1AC9740486D14A00FE50C9 /* CocoaMondoKit.ibplugin */,
+				53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13F8B6FD07B43410008AE28D /* Linked Frameworks */,
+				13F8B70407B43425008AE28D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32DBCF9E0370C38000C91783 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				54D33B2406778DD400C9C163 /* Class Descriptions */,
+				54D33B2506778DF000C9C163 /* Classes */,
+				32DBCF9F0370C38200C91783 /* Other Sources */,
+				131E8FE8067F80F40006E0CE /* Resources */,
+			);
+			name = Plugin;
+			sourceTree = "<group>";
+		};
+		32DBCF9F0370C38200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C044829E0C3328F4006E818F /* CocoaMondoKitViewIntegration.m */,
+				32DBCF980370C29C00C91783 /* CocoaMondoKit_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		54D33B2406778DD400C9C163 /* Class Descriptions */ = {
+			isa = PBXGroup;
+			children = (
+				A506C82110B2235200EAD3C2 /* MondoTextField.classdescription */,
+				54D33B2806778E3300C9C163 /* CocoaMondoKitView.classdescription */,
+			);
+			name = "Class Descriptions";
+			sourceTree = "<group>";
+		};
+		54D33B2506778DF000C9C163 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0259C57AFE90428111CA0C5A /* CocoaMondoKit.h */,
+				0259C576FE90428111CA0C5A /* CocoaMondoKit.m */,
+				0259C57BFE90428111CA0C5A /* CocoaMondoKitInspector.h */,
+				0259C577FE90428111CA0C5A /* CocoaMondoKitView.classdescription */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		54D33B2C06778E4400C9C163 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				C0894DA40C32F4C100401507 /* Classes */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		A506C70410B21D5500EAD3C2 /* mondoTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A506C72C10B21DB200EAD3C2 /* cocoawithlove.com */,
+				A506C72D10B21DC400EAD3C2 /* noodlesoft.com */,
+				A506C70610B21D6C00EAD3C2 /* MondoTextField.h */,
+				A506C70710B21D6C00EAD3C2 /* MondoTextField.m */,
+				A506C70810B21D6C00EAD3C2 /* MondoTextFieldCell.h */,
+				A506C70910B21D6C00EAD3C2 /* MondoTextFieldCell.m */,
+				A506C72810B21D9400EAD3C2 /* MondoZoomWindowController.h */,
+				A506C72910B21D9400EAD3C2 /* MondoZoomWindowController.m */,
+			);
+			name = mondoTextField;
+			sourceTree = "<group>";
+		};
+		A506C72C10B21DB200EAD3C2 /* cocoawithlove.com */ = {
+			isa = PBXGroup;
+			children = (
+				A506C72F10B21DD700EAD3C2 /* SynthesizeSingleton.h */,
+			);
+			name = cocoawithlove.com;
+			sourceTree = "<group>";
+		};
+		A506C72D10B21DC400EAD3C2 /* noodlesoft.com */ = {
+			isa = PBXGroup;
+			children = (
+				A506C73110B21DE200EAD3C2 /* NSWindow-NoodleEffects.h */,
+				A506C73210B21DE200EAD3C2 /* NSWindow-NoodleEffects.m */,
+			);
+			name = noodlesoft.com;
+			sourceTree = "<group>";
+		};
+		A506C73610B21E2B00EAD3C2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A506C73810B21E5800EAD3C2 /* zoomFieldMini_Pressed.png */,
+				A506C73910B21E5800EAD3C2 /* zoomFieldMini.png */,
+				A506C73A10B21E5800EAD3C2 /* zoomFieldRegular_Pressed.png */,
+				A506C73B10B21E5800EAD3C2 /* zoomFieldRegular.png */,
+				A506C73C10B21E5800EAD3C2 /* zoomFieldSmall_Pressed.png */,
+				A506C73D10B21E5800EAD3C2 /* zoomFieldSmall.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		A506C80D10B2206A00EAD3C2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A506C80E10B2207F00EAD3C2 /* MondoTextFieldIBIcon.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		C0894DA40C32F4C100401507 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A506C70410B21D5500EAD3C2 /* mondoTextField */,
+				C059ACDB0A49E0A20079D97B /* CocoaMondoKitView.h */,
+				C059ACDC0A49E0A20079D97B /* CocoaMondoKitView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		53DF68F8067E5B5A0090B5B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C059ACDD0A49E0A20079D97B /* CocoaMondoKitView.h in Headers */,
+				A506C60210B0588E00EAD3C2 /* CocoaMondoKitInspector.h in Headers */,
+				A506C70A10B21D6C00EAD3C2 /* MondoTextField.h in Headers */,
+				A506C70C10B21D6C00EAD3C2 /* MondoTextFieldCell.h in Headers */,
+				A506C72A10B21D9400EAD3C2 /* MondoZoomWindowController.h in Headers */,
+				A506C73010B21DD700EAD3C2 /* SynthesizeSingleton.h in Headers */,
+				A506C73310B21DE200EAD3C2 /* NSWindow-NoodleEffects.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C056397F08A954F8003078D8 /* Build configuration list for PBXNativeTarget "CocoaMondoKitFramework" */;
+			buildPhases = (
+				53DF68F8067E5B5A0090B5B0 /* Headers */,
+				53DF68F9067E5B5A0090B5B0 /* Resources */,
+				53DF68FA067E5B5A0090B5B0 /* Sources */,
+				53DF68FB067E5B5A0090B5B0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaMondoKitFramework;
+			productName = CocoaMondoKitFramework;
+			productReference = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8D1AC9600486D14A00FE50C9 /* CocoaMondoKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C056398308A954F8003078D8 /* Build configuration list for PBXNativeTarget "CocoaMondoKit" */;
+			buildPhases = (
+				8D1AC9660486D14A00FE50C9 /* Resources */,
+				8D1AC96A0486D14A00FE50C9 /* Sources */,
+				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
+				A54992D910B8615F002DB989 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A54992DB10B86195002DB989 /* PBXTargetDependency */,
+			);
+			name = CocoaMondoKit;
+			productInstallPath = "$(HOME)/Developer/Palettes";
+			productName = CocoaMondoKit;
+			productReference = 8D1AC9740486D14A00FE50C9 /* CocoaMondoKit.ibplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0259C573FE90428111CA0C5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = NO;
+			};
+			buildConfigurationList = C056398B08A954F8003078D8 /* Build configuration list for PBXProject "CocoaMondoKit" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0259C574FE90428111CA0C5A /* CocoaMondoKit */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53DF6901067E5B8E0090B5B0 /* All */,
+				8D1AC9600486D14A00FE50C9 /* CocoaMondoKit */,
+				53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53DF68F9067E5B5A0090B5B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A506C70F10B21D7800EAD3C2 /* mondoZoomPanel.xib in Resources */,
+				A506C73E10B21E5800EAD3C2 /* zoomFieldMini_Pressed.png in Resources */,
+				A506C73F10B21E5800EAD3C2 /* zoomFieldMini.png in Resources */,
+				A506C74010B21E5800EAD3C2 /* zoomFieldRegular_Pressed.png in Resources */,
+				A506C74110B21E5800EAD3C2 /* zoomFieldRegular.png in Resources */,
+				A506C74210B21E5800EAD3C2 /* zoomFieldSmall_Pressed.png in Resources */,
+				A506C74310B21E5800EAD3C2 /* zoomFieldSmall.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC9660486D14A00FE50C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */,
+				54D33B2906778E3300C9C163 /* CocoaMondoKitView.classdescription in Resources */,
+				C0A47C500A523B730004BDC3 /* CocoaMondoKitInspector.xib in Resources */,
+				D1AEDE470A6C289C0010C343 /* CocoaMondoKitLibrary.nib in Resources */,
+				A506C80F10B2207F00EAD3C2 /* MondoTextFieldIBIcon.png in Resources */,
+				A506C82210B2235200EAD3C2 /* MondoTextField.classdescription in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53DF68FA067E5B5A0090B5B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C059ACDE0A49E0A20079D97B /* CocoaMondoKitView.m in Sources */,
+				A506C70B10B21D6C00EAD3C2 /* MondoTextField.m in Sources */,
+				A506C70D10B21D6C00EAD3C2 /* MondoTextFieldCell.m in Sources */,
+				A506C72B10B21D9400EAD3C2 /* MondoZoomWindowController.m in Sources */,
+				A506C73410B21DE200EAD3C2 /* NSWindow-NoodleEffects.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1AC96A0486D14A00FE50C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C08787290A49DE9A00E9B151 /* CocoaMondoKit.m in Sources */,
+				8D1AC96C0486D14A00FE50C9 /* CocoaMondoKitView.classdescription in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53DF6903067E5B930090B5B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1AC9600486D14A00FE50C9 /* CocoaMondoKit */;
+			targetProxy = 53DF6902067E5B930090B5B0 /* PBXContainerItemProxy */;
+		};
+		53DF6905067E5B930090B5B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */;
+			targetProxy = 53DF6904067E5B930090B5B0 /* PBXContainerItemProxy */;
+		};
+		A54992DB10B86195002DB989 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */;
+			targetProxy = A54992DA10B86195002DB989 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D1AC97B0486D23100FE50C9 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C056398008A954F8003078D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "CocoaMondoKit-Info.plist";
+				PRODUCT_NAME = CocoaMondoKit;
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
+		};
+		C056398108A954F8003078D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = "CocoaMondoKit-Info.plist";
+				INSTALL_MODE_FLAG = "go-w,a+rX";
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "";
+				PRODUCT_NAME = CocoaMondoKit;
+				SDKROOT = macosx10.5;
+				SKIP_INSTALL = NO;
+			};
+			name = Release;
+		};
+		C056398408A954F8003078D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					$inherited,
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(DEVELOPER_DIR)/Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CocoaMondoKit_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks/CocoaMondoKit.framework/Resources";
+				PRODUCT_NAME = CocoaMondoKit;
+				WRAPPER_EXTENSION = ibplugin;
+			};
+			name = Debug;
+		};
+		C056398508A954F8003078D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					$inherited,
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CocoaMondoKit_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "";
+				PRODUCT_NAME = CocoaMondoKit;
+				SDKROOT = macosx10.5;
+				WRAPPER_EXTENSION = ibplugin;
+			};
+			name = Release;
+		};
+		C056398808A954F8003078D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		C056398908A954F8003078D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				PRODUCT_NAME = All;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		C056398C08A954F8003078D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_MODEL_TUNING = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C056398D08A954F8003078D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_MODEL_TUNING = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C056397F08A954F8003078D8 /* Build configuration list for PBXNativeTarget "CocoaMondoKitFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C056398008A954F8003078D8 /* Debug */,
+				C056398108A954F8003078D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C056398308A954F8003078D8 /* Build configuration list for PBXNativeTarget "CocoaMondoKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C056398408A954F8003078D8 /* Debug */,
+				C056398508A954F8003078D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C056398708A954F8003078D8 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C056398808A954F8003078D8 /* Debug */,
+				C056398908A954F8003078D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C056398B08A954F8003078D8 /* Build configuration list for PBXProject "CocoaMondoKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C056398C08A954F8003078D8 /* Debug */,
+				C056398D08A954F8003078D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0259C573FE90428111CA0C5A /* Project object */;
+}
