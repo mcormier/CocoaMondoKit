@@ -1,4 +1,3 @@
-
 How to make an ibplugin that opens up properly in 
 Interface Builder when double clicked.
 -------------------------------------------------
@@ -29,5 +28,9 @@ buttonLeftN = [[NSImage alloc] initWithContentsOfFile:[bundle pathForImageResour
 
 Where the class is the framework class contained within 
 the framework bundle.
+
+Loading a Nib from within a framework
+-------------------------------------
+TODO....
 
 
