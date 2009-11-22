@@ -24,6 +24,8 @@
 #import "SynthesizeSingleton.h"
 #import "NSWindow-NoodleEffects.h"
 
+#define INVISIBLE 0.0
+
 @interface MondoZoomWindowController (Private)
 -(NSButton*)makeButtonWithImageName:(NSString*)imgName andAltImage:(NSString*)altImgName;
 -(void)transferSelection:(NSTextField*)fromField to:(NSTextField*)toField;
@@ -223,7 +225,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MondoZoomWindowController);
   [button setAlternateImage: image];
   [image release];
   [[button cell] setHighlightsBy:NSContentsCellMask];
-
+  [button setAlphaValue:INVISIBLE];
+  
   [button autorelease];
   return button;  
 }
