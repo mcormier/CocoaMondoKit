@@ -62,6 +62,8 @@
 		A54993E910B9952A002DB989 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54993E610B9952A002DB989 /* MainMenu.xib */; };
 		A54993EC10B99578002DB989 /* CocoaMondoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
 		A54993FB10B9960C002DB989 /* CocoaMondoKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
+		A549944A10B99A74002DB989 /* CocoaMondoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
+		A549945010B99BF7002DB989 /* CocoaMondoKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
 		C059ACDD0A49E0A20079D97B /* CocoaMondoKitView.h in Headers */ = {isa = PBXBuildFile; fileRef = C059ACDB0A49E0A20079D97B /* CocoaMondoKitView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C059ACDE0A49E0A20079D97B /* CocoaMondoKitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C059ACDC0A49E0A20079D97B /* CocoaMondoKitView.m */; };
 		C08787290A49DE9A00E9B151 /* CocoaMondoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* CocoaMondoKit.m */; };
@@ -105,6 +107,20 @@
 			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9 /* CocoaMondoKit */;
 			remoteInfo = CocoaMondoKit;
 		};
+		A549944610B99A6A002DB989 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9 /* CocoaMondoKit */;
+			remoteInfo = CocoaMondoKit;
+		};
+		A549944810B99A6F002DB989 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */;
+			remoteInfo = CocoaMondoKitFramework;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -126,6 +142,16 @@
 			dstSubfolderSpec = 10;
 			files = (
 				A54993FB10B9960C002DB989 /* CocoaMondoKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A549944F10B99BF5002DB989 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A549945010B99BF7002DB989 /* CocoaMondoKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A54993CB10B99323002DB989 /* Cocoa.framework in Frameworks */,
+				A549944A10B99A74002DB989 /* CocoaMondoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,10 +569,13 @@
 				A54993AD10B9919B002DB989 /* Resources */,
 				A54993AE10B9919B002DB989 /* Sources */,
 				A54993AF10B9919B002DB989 /* Frameworks */,
+				A549944F10B99BF5002DB989 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A549944710B99A6A002DB989 /* PBXTargetDependency */,
+				A549944910B99A6F002DB989 /* PBXTargetDependency */,
 			);
 			name = Test10.6App;
 			productName = Test10.6App;
@@ -692,6 +722,16 @@
 			target = 8D1AC9600486D14A00FE50C9 /* CocoaMondoKit */;
 			targetProxy = A54993F310B995AD002DB989 /* PBXContainerItemProxy */;
 		};
+		A549944710B99A6A002DB989 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1AC9600486D14A00FE50C9 /* CocoaMondoKit */;
+			targetProxy = A549944610B99A6A002DB989 /* PBXContainerItemProxy */;
+		};
+		A549944910B99A6F002DB989 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */;
+			targetProxy = A549944810B99A6F002DB989 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -751,7 +791,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -800,12 +840,12 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Test10.6App-Info.plist";
+				INFOPLIST_FILE = "test/Test10.6App-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
 					"-framework",
