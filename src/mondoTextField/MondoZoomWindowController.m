@@ -43,10 +43,11 @@
 SYNTHESIZE_SINGLETON_FOR_CLASS(MondoZoomWindowController);
 
 - (id) init {
-  if ( self = [super init] ) {  
+  if ( self = [super init] ) {          
     if (![NSBundle loadNibNamed:@"mondoZoomPanel" owner:self]) {
-      NSLog(@"Error loading mondoZoomPanel Nib for document!");
+      NSLog(@"Error loading mondoZoomPanel Nib for document! Gah");
     } 
+    
   }
   
   return self;  
@@ -106,15 +107,15 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MondoZoomWindowController);
 
 
 - (NSButton*)getRegularButton {
-  return [self makeButtonWithImageName:@"zoomFieldRegular" andAltImage:@"zoomFieldRegular_Pressed"];
+  return [self makeButtonWithImageName:@"zoomFieldRegular.png" andAltImage:@"zoomFieldRegular_Pressed.png"];
 }
 
 - (NSButton*)getSmallButton {
-  return [self makeButtonWithImageName:@"zoomFieldSmall" andAltImage:@"zoomFieldSmall_Pressed"];
+  return [self makeButtonWithImageName:@"zoomFieldSmall.png" andAltImage:@"zoomFieldSmall_Pressed.png"];
 }
 
 - (NSButton*)getMiniButton {
-  return [self makeButtonWithImageName:@"zoomFieldMini" andAltImage:@"zoomFieldMini_Pressed"];
+  return [self makeButtonWithImageName:@"zoomFieldMini.png" andAltImage:@"zoomFieldMini_Pressed.png"];
 }
 
 #pragma mark Notifications
@@ -211,13 +212,18 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MondoZoomWindowController);
 }
 
 - (NSButton*)makeButtonWithImageName:(NSString*)imgName andAltImage:(NSString*)altImgName {
-  NSImage* image = [NSImage imageNamed:imgName];
+  NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+  NSImage *image = [[NSImage alloc] initWithContentsOfFile:[bundle pathForImageResource:imgName]];
+  
   NSButton *button = [[NSButton alloc] initWithFrame:NSMakeRect(0, 0, [image size].width, [image size].height)];
   [button setBordered:NO];
   [button setImage:image];
-  [button setAlternateImage:  [NSImage imageNamed:altImgName]];  
+  [image release];
+  image = [[NSImage alloc] initWithContentsOfFile:[bundle pathForImageResource:altImgName]];
+  [button setAlternateImage: image];
+  [image release];
   [[button cell] setHighlightsBy:NSContentsCellMask];
-  // Testing submodule change.
+
   [button autorelease];
   return button;  
 }
