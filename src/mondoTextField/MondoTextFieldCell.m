@@ -58,7 +58,7 @@
 
 // Gets called when the parent text field is made the first responder
 - (void)selectWithFrame:(NSRect)aRect inView:(NSView *)controlView editor:(NSText *)textObj 
-               delegate:(id)anObject start:(int)selStart length:(int)selLength {
+               delegate:(id)anObject start:(NSInteger)selStart length:(NSInteger)selLength {
 
   [super selectWithFrame:[self textRectForFrame:aRect]
                   inView:controlView
