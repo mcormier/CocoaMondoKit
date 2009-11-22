@@ -50,6 +50,18 @@
 		A506C82210B2235200EAD3C2 /* MondoTextField.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = A506C82110B2235200EAD3C2 /* MondoTextField.classdescription */; };
 		A54992D310B860A3002DB989 /* InterfaceBuilderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */; };
 		A54992E210B861F2002DB989 /* CocoaMondoKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
+		A54993BB10B991D3002DB989 /* testAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A54993BA10B991D3002DB989 /* testAppDelegate.m */; };
+		A54993BC10B991D3002DB989 /* testAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A54993BA10B991D3002DB989 /* testAppDelegate.m */; };
+		A54993C010B99260002DB989 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A54993BF10B99260002DB989 /* main.m */; };
+		A54993C110B99260002DB989 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A54993BF10B99260002DB989 /* main.m */; };
+		A54993C610B992A2002DB989 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A54993C210B992A2002DB989 /* InfoPlist.strings */; };
+		A54993C810B992A2002DB989 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A54993C210B992A2002DB989 /* InfoPlist.strings */; };
+		A54993CA10B99321002DB989 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		A54993CB10B99323002DB989 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		A54993E810B9952A002DB989 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54993E610B9952A002DB989 /* MainMenu.xib */; };
+		A54993E910B9952A002DB989 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54993E610B9952A002DB989 /* MainMenu.xib */; };
+		A54993EC10B99578002DB989 /* CocoaMondoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
+		A54993FB10B9960C002DB989 /* CocoaMondoKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
 		C059ACDD0A49E0A20079D97B /* CocoaMondoKitView.h in Headers */ = {isa = PBXBuildFile; fileRef = C059ACDB0A49E0A20079D97B /* CocoaMondoKitView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C059ACDE0A49E0A20079D97B /* CocoaMondoKitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C059ACDC0A49E0A20079D97B /* CocoaMondoKitView.m */; };
 		C08787290A49DE9A00E9B151 /* CocoaMondoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* CocoaMondoKit.m */; };
@@ -79,6 +91,20 @@
 			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */;
 			remoteInfo = CocoaMondoKitFramework;
 		};
+		A54993CC10B99345002DB989 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */;
+			remoteInfo = CocoaMondoKitFramework;
+		};
+		A54993F310B995AD002DB989 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9 /* CocoaMondoKit */;
+			remoteInfo = CocoaMondoKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -91,6 +117,16 @@
 				A54992E210B861F2002DB989 /* CocoaMondoKit.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A54993FA10B99608002DB989 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A54993FB10B9960C002DB989 /* CocoaMondoKit.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -129,6 +165,16 @@
 		A506C74A10B21F9A00EAD3C2 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		A506C80E10B2207F00EAD3C2 /* MondoTextFieldIBIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MondoTextFieldIBIcon.png; path = src/Plugin/images/MondoTextFieldIBIcon.png; sourceTree = "<group>"; };
 		A506C82110B2235200EAD3C2 /* MondoTextField.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = MondoTextField.classdescription; path = src/Plugin/MondoTextField.classdescription; sourceTree = "<group>"; };
+		A54993A710B99181002DB989 /* Test10.5App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test10.5App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A54993A910B99181002DB989 /* Test10.5App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Test10.5App-Info.plist"; path = "test/Test10.5App-Info.plist"; sourceTree = "<group>"; };
+		A54993B110B9919B002DB989 /* Test10.6App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test10.6App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A54993B310B9919B002DB989 /* Test10.6App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Test10.6App-Info.plist"; path = "test/Test10.6App-Info.plist"; sourceTree = "<group>"; };
+		A54993B710B991B0002DB989 /* test_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = test_Prefix.pch; path = test/test_Prefix.pch; sourceTree = "<group>"; };
+		A54993B810B991BF002DB989 /* testAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testAppDelegate.h; path = test/src/testAppDelegate.h; sourceTree = "<group>"; };
+		A54993BA10B991D3002DB989 /* testAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testAppDelegate.m; path = test/src/testAppDelegate.m; sourceTree = "<group>"; };
+		A54993BF10B99260002DB989 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = test/src/main.m; sourceTree = "<group>"; };
+		A54993C310B992A2002DB989 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = test/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A54993E710B9952A002DB989 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = test/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C044829E0C3328F4006E818F /* CocoaMondoKitViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = CocoaMondoKitViewIntegration.m; path = src/Plugin/CocoaMondoKitViewIntegration.m; sourceTree = "<group>"; };
 		C059ACDB0A49E0A20079D97B /* CocoaMondoKitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaMondoKitView.h; path = src/CocoaMondoKitView.h; sourceTree = "<group>"; };
 		C059ACDC0A49E0A20079D97B /* CocoaMondoKitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CocoaMondoKitView.m; path = src/CocoaMondoKitView.m; sourceTree = "<group>"; };
@@ -158,6 +204,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A54993A510B99181002DB989 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54993CA10B99321002DB989 /* Cocoa.framework in Frameworks */,
+				A54993EC10B99578002DB989 /* CocoaMondoKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A54993AF10B9919B002DB989 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54993CB10B99323002DB989 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -166,6 +229,7 @@
 			children = (
 				32DBCF9E0370C38000C91783 /* Plugin */,
 				54D33B2C06778E4400C9C163 /* Framework */,
+				A54993A110B9911A002DB989 /* Test */,
 				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
@@ -220,6 +284,8 @@
 			children = (
 				8D1AC9740486D14A00FE50C9 /* CocoaMondoKit.ibplugin */,
 				53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */,
+				A54993A710B99181002DB989 /* Test10.5App.app */,
+				A54993B110B9919B002DB989 /* Test10.6App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -334,6 +400,53 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		A54993A110B9911A002DB989 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				A54993A210B9914E002DB989 /* Headers */,
+				A54993B910B991C5002DB989 /* Classes */,
+				A54993BE10B99208002DB989 /* Other Sources */,
+				A54993BD10B991FC002DB989 /* Resources */,
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
+		A54993A210B9914E002DB989 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				A54993B710B991B0002DB989 /* test_Prefix.pch */,
+				A54993B810B991BF002DB989 /* testAppDelegate.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		A54993B910B991C5002DB989 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A54993BA10B991D3002DB989 /* testAppDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A54993BD10B991FC002DB989 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A54993E610B9952A002DB989 /* MainMenu.xib */,
+				A54993C210B992A2002DB989 /* InfoPlist.strings */,
+				A54993A910B99181002DB989 /* Test10.5App-Info.plist */,
+				A54993B310B9919B002DB989 /* Test10.6App-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A54993BE10B99208002DB989 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A54993BF10B99260002DB989 /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
 		C0894DA40C32F4C100401507 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +515,43 @@
 			productReference = 8D1AC9740486D14A00FE50C9 /* CocoaMondoKit.ibplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
+		A54993A610B99181002DB989 /* Test10.5App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A54993AC10B99182002DB989 /* Build configuration list for PBXNativeTarget "Test10.5App" */;
+			buildPhases = (
+				A54993A310B99181002DB989 /* Resources */,
+				A54993A410B99181002DB989 /* Sources */,
+				A54993A510B99181002DB989 /* Frameworks */,
+				A54993FA10B99608002DB989 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A54993CD10B99345002DB989 /* PBXTargetDependency */,
+				A54993F410B995AD002DB989 /* PBXTargetDependency */,
+			);
+			name = Test10.5App;
+			productName = Test10.5App;
+			productReference = A54993A710B99181002DB989 /* Test10.5App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A54993B010B9919B002DB989 /* Test10.6App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A54993B610B9919C002DB989 /* Build configuration list for PBXNativeTarget "Test10.6App" */;
+			buildPhases = (
+				A54993AD10B9919B002DB989 /* Resources */,
+				A54993AE10B9919B002DB989 /* Sources */,
+				A54993AF10B9919B002DB989 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Test10.6App;
+			productName = Test10.6App;
+			productReference = A54993B110B9919B002DB989 /* Test10.6App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -420,6 +570,8 @@
 				53DF6901067E5B8E0090B5B0 /* All */,
 				8D1AC9600486D14A00FE50C9 /* CocoaMondoKit */,
 				53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */,
+				A54993A610B99181002DB989 /* Test10.5App */,
+				A54993B010B9919B002DB989 /* Test10.6App */,
 			);
 		};
 /* End PBXProject section */
@@ -452,6 +604,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A54993A310B99181002DB989 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54993C610B992A2002DB989 /* InfoPlist.strings in Resources */,
+				A54993E810B9952A002DB989 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A54993AD10B9919B002DB989 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54993C810B992A2002DB989 /* InfoPlist.strings in Resources */,
+				A54993E910B9952A002DB989 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -476,6 +646,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A54993A410B99181002DB989 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54993BB10B991D3002DB989 /* testAppDelegate.m in Sources */,
+				A54993C010B99260002DB989 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A54993AE10B9919B002DB989 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54993BC10B991D3002DB989 /* testAppDelegate.m in Sources */,
+				A54993C110B99260002DB989 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -494,6 +682,16 @@
 			target = 53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */;
 			targetProxy = A54992DA10B86195002DB989 /* PBXContainerItemProxy */;
 		};
+		A54993CD10B99345002DB989 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */;
+			targetProxy = A54993CC10B99345002DB989 /* PBXContainerItemProxy */;
+		};
+		A54993F410B995AD002DB989 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1AC9600486D14A00FE50C9 /* CocoaMondoKit */;
+			targetProxy = A54993F310B995AD002DB989 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -505,9 +703,123 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		A54993C210B992A2002DB989 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A54993C310B992A2002DB989 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A54993E610B9952A002DB989 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A54993E710B9952A002DB989 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A54993AA10B99182002DB989 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Test10.5App-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Test10.5App;
+			};
+			name = Debug;
+		};
+		A54993AB10B99182002DB989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "test/Test10.5App-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Test10.5App;
+				SDKROOT = macosx10.5;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		A54993B410B9919C002DB989 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Test10.6App-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Test10.6App;
+			};
+			name = Debug;
+		};
+		A54993B510B9919C002DB989 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Test10.6App-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Test10.6App;
+				SDKROOT = macosx10.6;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C056398008A954F8003078D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -649,13 +961,31 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.5;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A54993AC10B99182002DB989 /* Build configuration list for PBXNativeTarget "Test10.5App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54993AA10B99182002DB989 /* Debug */,
+				A54993AB10B99182002DB989 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A54993B610B9919C002DB989 /* Build configuration list for PBXNativeTarget "Test10.6App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54993B410B9919C002DB989 /* Debug */,
+				A54993B510B9919C002DB989 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C056397F08A954F8003078D8 /* Build configuration list for PBXNativeTarget "CocoaMondoKitFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
