@@ -23,21 +23,13 @@
 
 /* Begin PBXBuildFile section */
 		13F8B89007B43554008AE28D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
-		54D33B2906778E3300C9C163 /* CocoaMondoKitView.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 54D33B2806778E3300C9C163 /* CocoaMondoKitView.classdescription */; };
-		8D1AC96C0486D14A00FE50C9 /* CocoaMondoKitView.classdescription in Sources */ = {isa = PBXBuildFile; fileRef = 0259C577FE90428111CA0C5A /* CocoaMondoKitView.classdescription */; settings = {ATTRIBUTES = (); }; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */; };
-		A506C60210B0588E00EAD3C2 /* CocoaMondoKitInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 0259C57BFE90428111CA0C5A /* CocoaMondoKitInspector.h */; };
 		A506C64310B05B1800EAD3C2 /* CocoaMondoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
-		A506C70A10B21D6C00EAD3C2 /* MondoTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A506C70610B21D6C00EAD3C2 /* MondoTextField.h */; };
 		A506C70B10B21D6C00EAD3C2 /* MondoTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A506C70710B21D6C00EAD3C2 /* MondoTextField.m */; };
-		A506C70C10B21D6C00EAD3C2 /* MondoTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A506C70810B21D6C00EAD3C2 /* MondoTextFieldCell.h */; };
 		A506C70D10B21D6C00EAD3C2 /* MondoTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A506C70910B21D6C00EAD3C2 /* MondoTextFieldCell.m */; };
 		A506C70F10B21D7800EAD3C2 /* mondoZoomPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A506C70E10B21D7800EAD3C2 /* mondoZoomPanel.xib */; };
-		A506C72A10B21D9400EAD3C2 /* MondoZoomWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = A506C72810B21D9400EAD3C2 /* MondoZoomWindowController.h */; };
 		A506C72B10B21D9400EAD3C2 /* MondoZoomWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A506C72910B21D9400EAD3C2 /* MondoZoomWindowController.m */; };
-		A506C73010B21DD700EAD3C2 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = A506C72F10B21DD700EAD3C2 /* SynthesizeSingleton.h */; };
-		A506C73310B21DE200EAD3C2 /* NSWindow-NoodleEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = A506C73110B21DE200EAD3C2 /* NSWindow-NoodleEffects.h */; };
 		A506C73410B21DE200EAD3C2 /* NSWindow-NoodleEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = A506C73210B21DE200EAD3C2 /* NSWindow-NoodleEffects.m */; };
 		A506C73E10B21E5800EAD3C2 /* zoomFieldMini_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = A506C73810B21E5800EAD3C2 /* zoomFieldMini_Pressed.png */; };
 		A506C73F10B21E5800EAD3C2 /* zoomFieldMini.png in Resources */ = {isa = PBXBuildFile; fileRef = A506C73910B21E5800EAD3C2 /* zoomFieldMini.png */; };
@@ -58,16 +50,17 @@
 		A54993C810B992A2002DB989 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A54993C210B992A2002DB989 /* InfoPlist.strings */; };
 		A54993CA10B99321002DB989 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		A54993CB10B99323002DB989 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
-		A54993E810B9952A002DB989 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54993E610B9952A002DB989 /* MainMenu.xib */; };
-		A54993E910B9952A002DB989 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54993E610B9952A002DB989 /* MainMenu.xib */; };
 		A54993EC10B99578002DB989 /* CocoaMondoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
 		A54993FB10B9960C002DB989 /* CocoaMondoKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
 		A549944A10B99A74002DB989 /* CocoaMondoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
 		A549945010B99BF7002DB989 /* CocoaMondoKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */; };
-		C059ACDD0A49E0A20079D97B /* CocoaMondoKitView.h in Headers */ = {isa = PBXBuildFile; fileRef = C059ACDB0A49E0A20079D97B /* CocoaMondoKitView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C059ACDE0A49E0A20079D97B /* CocoaMondoKitView.m in Sources */ = {isa = PBXBuildFile; fileRef = C059ACDC0A49E0A20079D97B /* CocoaMondoKitView.m */; };
+		A549947D10B9FE1C002DB989 /* MondoTextFieldIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = A549947C10B9FE1C002DB989 /* MondoTextFieldIntegration.m */; };
+		A549948710BA00E3002DB989 /* MondoTextFieldInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = A549948610BA00E3002DB989 /* MondoTextFieldInspector.m */; };
+		A549953610BB5141002DB989 /* MondoTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A506C70610B21D6C00EAD3C2 /* MondoTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A549975110BF4052002DB989 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A549974F10BF4052002DB989 /* MainMenu.xib */; };
+		A549975210BF4052002DB989 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A549974F10BF4052002DB989 /* MainMenu.xib */; };
 		C08787290A49DE9A00E9B151 /* CocoaMondoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* CocoaMondoKit.m */; };
-		C0A47C500A523B730004BDC3 /* CocoaMondoKitInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05B20D80A48CB530099B9E5 /* CocoaMondoKitInspector.xib */; };
+		C0A47C500A523B730004BDC3 /* MondoTextFieldInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */; };
 		D1AEDE470A6C289C0010C343 /* CocoaMondoKitLibrary.nib in Resources */ = {isa = PBXBuildFile; fileRef = D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */; };
 /* End PBXBuildFile section */
 
@@ -90,35 +83,35 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
 			remoteInfo = CocoaMondoKitFramework;
 		};
 		A54993CC10B99345002DB989 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
 			remoteInfo = CocoaMondoKitFramework;
 		};
 		A54993F310B995AD002DB989 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9 /* CocoaMondoKit */;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
 			remoteInfo = CocoaMondoKit;
 		};
 		A549944610B99A6A002DB989 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9 /* CocoaMondoKit */;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
 			remoteInfo = CocoaMondoKit;
 		};
 		A549944810B99A6F002DB989 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0 /* CocoaMondoKitFramework */;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
 			remoteInfo = CocoaMondoKitFramework;
 		};
 /* End PBXContainerItemProxy section */
@@ -159,7 +152,6 @@
 
 /* Begin PBXFileReference section */
 		0259C576FE90428111CA0C5A /* CocoaMondoKit.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = CocoaMondoKit.m; path = src/Plugin/CocoaMondoKit.m; sourceTree = "<group>"; };
-		0259C577FE90428111CA0C5A /* CocoaMondoKitView.classdescription */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.ibClassDescription; name = CocoaMondoKitView.classdescription; path = src/Plugin/CocoaMondoKitView.classdescription; sourceTree = "<group>"; };
 		0259C57AFE90428111CA0C5A /* CocoaMondoKit.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CocoaMondoKit.h; path = src/Plugin/CocoaMondoKit.h; sourceTree = "<group>"; };
 		0259C57BFE90428111CA0C5A /* CocoaMondoKitInspector.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CocoaMondoKitInspector.h; path = src/Plugin/CocoaMondoKitInspector.h; sourceTree = "<group>"; };
 		13F8B88807B434F6008AE28D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -168,7 +160,6 @@
 		32DBCF980370C29C00C91783 /* CocoaMondoKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaMondoKit_Prefix.pch; sourceTree = "<group>"; };
 		53DF68FD067E5B5A0090B5B0 /* CocoaMondoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaMondoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DF68FE067E5B5A0090B5B0 /* CocoaMondoKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaMondoKit-Info.plist"; sourceTree = "<group>"; };
-		54D33B2806778E3300C9C163 /* CocoaMondoKitView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = CocoaMondoKitView.classdescription; path = src/Plugin/CocoaMondoKitView.classdescription; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* CocoaMondoKit.ibplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaMondoKit.ibplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1AC97B0486D23100FE50C9 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -200,11 +191,13 @@
 		A54993BA10B991D3002DB989 /* testAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testAppDelegate.m; path = test/src/testAppDelegate.m; sourceTree = "<group>"; };
 		A54993BF10B99260002DB989 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = test/src/main.m; sourceTree = "<group>"; };
 		A54993C310B992A2002DB989 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = test/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A54993E710B9952A002DB989 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = test/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		C044829E0C3328F4006E818F /* CocoaMondoKitViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = CocoaMondoKitViewIntegration.m; path = src/Plugin/CocoaMondoKitViewIntegration.m; sourceTree = "<group>"; };
-		C059ACDB0A49E0A20079D97B /* CocoaMondoKitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaMondoKitView.h; path = src/CocoaMondoKitView.h; sourceTree = "<group>"; };
-		C059ACDC0A49E0A20079D97B /* CocoaMondoKitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CocoaMondoKitView.m; path = src/CocoaMondoKitView.m; sourceTree = "<group>"; };
-		C05B20D80A48CB530099B9E5 /* CocoaMondoKitInspector.xib */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file.xib; name = CocoaMondoKitInspector.xib; path = English.lproj/CocoaMondoKitInspector.xib; sourceTree = "<group>"; };
+		A549947C10B9FE1C002DB989 /* MondoTextFieldIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoTextFieldIntegration.m; path = src/Plugin/MondoTextFieldIntegration.m; sourceTree = "<group>"; };
+		A549948510BA00E3002DB989 /* MondoTextFieldInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoTextFieldInspector.h; path = src/Plugin/MondoTextFieldInspector.h; sourceTree = "<group>"; };
+		A549948610BA00E3002DB989 /* MondoTextFieldInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoTextFieldInspector.m; path = src/Plugin/MondoTextFieldInspector.m; sourceTree = "<group>"; };
+		A54995D110BF3223002DB989 /* TestFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestFramework-Info.plist"; sourceTree = "<group>"; };
+		A54995E710BF3423002DB989 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A549975010BF4052002DB989 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = test/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file.xib; name = MondoTextFieldInspector.xib; path = English.lproj/MondoTextFieldInspector.xib; sourceTree = "<group>"; };
 		C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = /Developer/Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = "<absolute>"; };
 		D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = CocoaMondoKitLibrary.nib; path = English.lproj/CocoaMondoKitLibrary.nib; sourceTree = "<group>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -260,6 +253,8 @@
 				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
+				A54995D110BF3223002DB989 /* TestFramework-Info.plist */,
+				A54995E710BF3423002DB989 /* Cocoa.framework */,
 			);
 			name = CocoaMondoKit;
 			sourceTree = "<group>";
@@ -281,7 +276,7 @@
 			children = (
 				A506C80D10B2206A00EAD3C2 /* images */,
 				D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */,
-				C05B20D80A48CB530099B9E5 /* CocoaMondoKitInspector.xib */,
+				C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -340,7 +335,6 @@
 		32DBCF9F0370C38200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				C044829E0C3328F4006E818F /* CocoaMondoKitViewIntegration.m */,
 				32DBCF980370C29C00C91783 /* CocoaMondoKit_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -350,7 +344,6 @@
 			isa = PBXGroup;
 			children = (
 				A506C82110B2235200EAD3C2 /* MondoTextField.classdescription */,
-				54D33B2806778E3300C9C163 /* CocoaMondoKitView.classdescription */,
 			);
 			name = "Class Descriptions";
 			sourceTree = "<group>";
@@ -361,7 +354,9 @@
 				0259C57AFE90428111CA0C5A /* CocoaMondoKit.h */,
 				0259C576FE90428111CA0C5A /* CocoaMondoKit.m */,
 				0259C57BFE90428111CA0C5A /* CocoaMondoKitInspector.h */,
-				0259C577FE90428111CA0C5A /* CocoaMondoKitView.classdescription */,
+				A549947C10B9FE1C002DB989 /* MondoTextFieldIntegration.m */,
+				A549948510BA00E3002DB989 /* MondoTextFieldInspector.h */,
+				A549948610BA00E3002DB989 /* MondoTextFieldInspector.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -458,7 +453,7 @@
 		A54993BD10B991FC002DB989 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A54993E610B9952A002DB989 /* MainMenu.xib */,
+				A549974F10BF4052002DB989 /* MainMenu.xib */,
 				A54993C210B992A2002DB989 /* InfoPlist.strings */,
 				A54993A910B99181002DB989 /* Test10.5App-Info.plist */,
 				A54993B310B9919B002DB989 /* Test10.6App-Info.plist */,
@@ -478,8 +473,6 @@
 			isa = PBXGroup;
 			children = (
 				A506C70410B21D5500EAD3C2 /* mondoTextField */,
-				C059ACDB0A49E0A20079D97B /* CocoaMondoKitView.h */,
-				C059ACDC0A49E0A20079D97B /* CocoaMondoKitView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -487,17 +480,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		53DF68F8067E5B5A0090B5B0 /* Headers */ = {
+		A549955B10BB535F002DB989 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C059ACDD0A49E0A20079D97B /* CocoaMondoKitView.h in Headers */,
-				A506C60210B0588E00EAD3C2 /* CocoaMondoKitInspector.h in Headers */,
-				A506C70A10B21D6C00EAD3C2 /* MondoTextField.h in Headers */,
-				A506C70C10B21D6C00EAD3C2 /* MondoTextFieldCell.h in Headers */,
-				A506C72A10B21D9400EAD3C2 /* MondoZoomWindowController.h in Headers */,
-				A506C73010B21DD700EAD3C2 /* SynthesizeSingleton.h in Headers */,
-				A506C73310B21DE200EAD3C2 /* NSWindow-NoodleEffects.h in Headers */,
+				A549953610BB5141002DB989 /* MondoTextField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,7 +495,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C056397F08A954F8003078D8 /* Build configuration list for PBXNativeTarget "CocoaMondoKitFramework" */;
 			buildPhases = (
-				53DF68F8067E5B5A0090B5B0 /* Headers */,
+				A549955B10BB535F002DB989 /* Headers */,
 				53DF68F9067E5B5A0090B5B0 /* Resources */,
 				53DF68FA067E5B5A0090B5B0 /* Sources */,
 				53DF68FB067E5B5A0090B5B0 /* Frameworks */,
@@ -626,8 +613,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */,
-				54D33B2906778E3300C9C163 /* CocoaMondoKitView.classdescription in Resources */,
-				C0A47C500A523B730004BDC3 /* CocoaMondoKitInspector.xib in Resources */,
+				C0A47C500A523B730004BDC3 /* MondoTextFieldInspector.xib in Resources */,
 				D1AEDE470A6C289C0010C343 /* CocoaMondoKitLibrary.nib in Resources */,
 				A506C80F10B2207F00EAD3C2 /* MondoTextFieldIBIcon.png in Resources */,
 				A506C82210B2235200EAD3C2 /* MondoTextField.classdescription in Resources */,
@@ -639,7 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A54993C610B992A2002DB989 /* InfoPlist.strings in Resources */,
-				A54993E810B9952A002DB989 /* MainMenu.xib in Resources */,
+				A549975210BF4052002DB989 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,7 +634,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A54993C810B992A2002DB989 /* InfoPlist.strings in Resources */,
-				A54993E910B9952A002DB989 /* MainMenu.xib in Resources */,
+				A549975110BF4052002DB989 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,7 +645,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C059ACDE0A49E0A20079D97B /* CocoaMondoKitView.m in Sources */,
 				A506C70B10B21D6C00EAD3C2 /* MondoTextField.m in Sources */,
 				A506C70D10B21D6C00EAD3C2 /* MondoTextFieldCell.m in Sources */,
 				A506C72B10B21D9400EAD3C2 /* MondoZoomWindowController.m in Sources */,
@@ -672,7 +657,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C08787290A49DE9A00E9B151 /* CocoaMondoKit.m in Sources */,
-				8D1AC96C0486D14A00FE50C9 /* CocoaMondoKitView.classdescription in Sources */,
+				A549947D10B9FE1C002DB989 /* MondoTextFieldIntegration.m in Sources */,
+				A549948710BA00E3002DB989 /* MondoTextFieldInspector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,10 +737,10 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A54993E610B9952A002DB989 /* MainMenu.xib */ = {
+		A549974F10BF4052002DB989 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A54993E710B9952A002DB989 /* English */,
+				A549975010BF4052002DB989 /* English */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
