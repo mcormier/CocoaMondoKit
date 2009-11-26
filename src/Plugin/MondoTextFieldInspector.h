@@ -7,10 +7,14 @@
 //
 
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
-
+#import "MondoTextField.h"
 
 @interface MondoTextFieldInspector : IBInspector {
-
+  MondoTextField *textField;
+  
+  NSString* windowTitle;
 }
+
+@property(retain) NSString* windowTitle;
 
 @end
