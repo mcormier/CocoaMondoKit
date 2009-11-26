@@ -39,6 +39,8 @@
 
 @implementation MondoTextField
 
+@synthesize windowTitle;
+
 // The whitespace margin for text in the textfield.  
 // Currently only tested with "Small" size textfields.
 static NSInteger HORIZ_MARGIN = 3;
@@ -90,12 +92,13 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
   [[NSAnimationContext currentContext] setDuration:0.0];
   [self displayButtonIfNeeded];
   
-  // We will be fading in and out the button so
+  // We will be fading the button in and out so
   // the appearance of the button is not abrupt to the user.
   zoomButton.wantsLayer = YES;
 
   [self setupListeners];
 }
+
 
 -(void)setupListeners {
   [[NSNotificationCenter defaultCenter]
@@ -166,7 +169,8 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
 }
 
 - (void)setStringValue:(NSString *)aString {
-  [super setStringValue:aString];
+  //[super setStringValue:aString];
+  [super setStringValue:@"blah"];
   [self sendChangeNotification];
 }
 
@@ -196,10 +200,15 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
   [[zoomButton animator] setAlphaValue: (buttonVisible ? VISIBLE : INVISIBLE)];
 }
 
-
+-(void)setWindowTitle:(NSString *)title {
+  NSLog(@"Setting title --> %@", title);
+  [title retain];
+  [windowTitle release];
+  windowTitle = title;
+}
 
 - (NSString*) fieldLabel {
-  return [labelTextField stringValue];
+  return windowTitle;
 }
 
 @end

@@ -22,7 +22,8 @@
 
 @interface MondoTextField : NSTextField {
 
-  IBOutlet NSTextField *labelTextField;
+  
+  NSString *windowTitle;
   
 @private
   NSButton * zoomButton;
@@ -31,6 +32,8 @@
   // Used for calculating the length of the displayed string.
   NSDictionary	*_attrDict;  
 }
+
+@property(retain) NSString* windowTitle;
 
 - (NSString*) fieldLabel;
 - (float) stringWidth;
