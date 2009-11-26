@@ -46,7 +46,7 @@
 					<object class="NSTextField" id="767324328">
 						<reference key="NSNextResponder" ref="148061301"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{84, 5}, {180, 19}}</string>
+						<string key="NSFrame">{{89, 5}, {175, 19}}</string>
 						<reference key="NSSuperview" ref="148061301"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="361495836">
@@ -83,13 +83,13 @@
 					<object class="NSTextField" id="771170495">
 						<reference key="NSNextResponder" ref="148061301"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{8, 7}, {70, 14}}</string>
+						<string key="NSFrame">{{6, 7}, {78, 14}}</string>
 						<reference key="NSSuperview" ref="148061301"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="272507628">
 							<int key="NSCellFlags">67239488</int>
 							<int key="NSCellFlags2">4326400</int>
-							<string key="NSContents">My Title</string>
+							<string key="NSContents">Window Title</string>
 							<object class="NSFont" key="NSSupport">
 								<string key="NSName">LucidaGrande-Bold</string>
 								<double key="NSSize">11</double>
@@ -136,19 +136,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: inspectedObjectsController.selection.title</string>
+						<string key="label">value: inspectedObjectsController.selection.windowTitle</string>
 						<reference key="source" ref="767324328"/>
 						<reference key="destination" ref="893560672"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="767324328"/>
 							<reference key="NSDestination" ref="893560672"/>
-							<string key="NSLabel">value: inspectedObjectsController.selection.title</string>
+							<string key="NSLabel">value: inspectedObjectsController.selection.windowTitle</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">inspectedObjectsController.selection.title</string>
+							<string key="NSKeyPath">inspectedObjectsController.selection.windowTitle</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">87</int>
+					<int key="connectionID">88</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -260,7 +260,7 @@
 							<int key="affinity">0</int>
 						</object>
 					</object>
-					<string>{{653, 978}, {272, 28}}</string>
+					<string>{{561, 869}, {272, 28}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSMutableArray">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -326,7 +326,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">87</int>
+			<int key="maxID">88</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -694,6 +694,13 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">InterfaceBuilderKit.framework/Headers/IBObjectIntegration.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">Print.framework/Headers/PDEPluginInterface.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
