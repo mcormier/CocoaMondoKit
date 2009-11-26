@@ -17,7 +17,7 @@
   [super ibPopulateKeyPaths:keyPaths];
   
   [[keyPaths objectForKey:IBAttributeKeyPaths] addObjectsFromArray:
-        [NSArray arrayWithObjects:@"title", nil]];
+        [NSArray arrayWithObjects:@"windowTitle", nil]];
 }
 
 - (void)ibPopulateAttributeInspectorClasses:(NSMutableArray *)classes {
