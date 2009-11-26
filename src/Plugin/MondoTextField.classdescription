@@ -5,7 +5,7 @@
 	};
 	Outlets = {
 		// Define outlet descriptions here, for example
-		 labelTextField = NSTextField;
+		// labelTextField = NSTextField;
 	};
     ClassName = MondoTextField; 
     SuperClass = NSTextField; 
