@@ -194,7 +194,6 @@
 		A549947C10B9FE1C002DB989 /* MondoTextFieldIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoTextFieldIntegration.m; path = src/Plugin/MondoTextFieldIntegration.m; sourceTree = "<group>"; };
 		A549948510BA00E3002DB989 /* MondoTextFieldInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoTextFieldInspector.h; path = src/Plugin/MondoTextFieldInspector.h; sourceTree = "<group>"; };
 		A549948610BA00E3002DB989 /* MondoTextFieldInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoTextFieldInspector.m; path = src/Plugin/MondoTextFieldInspector.m; sourceTree = "<group>"; };
-		A54995D110BF3223002DB989 /* TestFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestFramework-Info.plist"; sourceTree = "<group>"; };
 		A54995E710BF3423002DB989 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A549975010BF4052002DB989 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = test/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file.xib; name = MondoTextFieldInspector.xib; path = English.lproj/MondoTextFieldInspector.xib; sourceTree = "<group>"; };
@@ -253,7 +252,6 @@
 				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
-				A54995D110BF3223002DB989 /* TestFramework-Info.plist */,
 				A54995E710BF3423002DB989 /* Cocoa.framework */,
 			);
 			name = CocoaMondoKit;
