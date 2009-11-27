@@ -22,11 +22,7 @@
 	[super refresh];
   
   textField = [[self inspectedObjects] objectAtIndex:0];
-
-  NSString* title = [textField windowTitle];
-  NSLog(@"Inside Refresh got a title of %@", title);
-  
-  [self setWindowTitle:title];
+  [self setWindowTitle:[textField windowTitle]];
   
 }
 
