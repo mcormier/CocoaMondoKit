@@ -49,6 +49,7 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
 - (id)initWithCoder:(NSCoder *)decoder {
   
   if (self = [super initWithCoder:decoder] ) {    
+    [self setWindowTitle:[decoder decodeObjectForKey:@"MondoWindowTitle"]];
     
     int buttonHeight = NSHeight([self frame]);
     
@@ -81,6 +82,11 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
 
   }
   return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+  [super encodeWithCoder:coder];
+  [coder encodeObject:[self windowTitle] forKey:@"MondoWindowTitle"];
 }
 
 - (void)awakeFromNib {
@@ -201,7 +207,6 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
 }
 
 -(void)setWindowTitle:(NSString *)title {
-  NSLog(@"Setting title --> %@", title);
   [title retain];
   [windowTitle release];
   windowTitle = title;
