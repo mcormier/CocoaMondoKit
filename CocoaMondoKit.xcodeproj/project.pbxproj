@@ -59,6 +59,7 @@
 		A549953610BB5141002DB989 /* MondoTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A506C70610B21D6C00EAD3C2 /* MondoTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A549975110BF4052002DB989 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A549974F10BF4052002DB989 /* MainMenu.xib */; };
 		A549975210BF4052002DB989 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A549974F10BF4052002DB989 /* MainMenu.xib */; };
+		A549982A10C19FCF002DB989 /* CocoaMondoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A549982910C19FCF002DB989 /* CocoaMondoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C08787290A49DE9A00E9B151 /* CocoaMondoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* CocoaMondoKit.m */; };
 		C0A47C500A523B730004BDC3 /* MondoTextFieldInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */; };
 		D1AEDE470A6C289C0010C343 /* CocoaMondoKitLibrary.nib in Resources */ = {isa = PBXBuildFile; fileRef = D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */; };
@@ -163,22 +164,22 @@
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* CocoaMondoKit.ibplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaMondoKit.ibplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1AC97B0486D23100FE50C9 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A506C70610B21D6C00EAD3C2 /* MondoTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoTextField.h; path = src/mondoTextField/MondoTextField.h; sourceTree = "<group>"; };
-		A506C70710B21D6C00EAD3C2 /* MondoTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoTextField.m; path = src/mondoTextField/MondoTextField.m; sourceTree = "<group>"; };
-		A506C70810B21D6C00EAD3C2 /* MondoTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoTextFieldCell.h; path = src/mondoTextField/MondoTextFieldCell.h; sourceTree = "<group>"; };
-		A506C70910B21D6C00EAD3C2 /* MondoTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoTextFieldCell.m; path = src/mondoTextField/MondoTextFieldCell.m; sourceTree = "<group>"; };
-		A506C70E10B21D7800EAD3C2 /* mondoZoomPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = mondoZoomPanel.xib; path = src/mondoTextField/mondoZoomPanel.xib; sourceTree = "<group>"; };
-		A506C72810B21D9400EAD3C2 /* MondoZoomWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoZoomWindowController.h; path = src/mondoTextField/MondoZoomWindowController.h; sourceTree = "<group>"; };
-		A506C72910B21D9400EAD3C2 /* MondoZoomWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoZoomWindowController.m; path = src/mondoTextField/MondoZoomWindowController.m; sourceTree = "<group>"; };
-		A506C72F10B21DD700EAD3C2 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SynthesizeSingleton.h; path = src/mondoTextField/cocoawithlove.com/SynthesizeSingleton.h; sourceTree = "<group>"; };
-		A506C73110B21DE200EAD3C2 /* NSWindow-NoodleEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSWindow-NoodleEffects.h"; path = "src/mondoTextField/noodlesoft.com/NSWindow-NoodleEffects.h"; sourceTree = "<group>"; };
-		A506C73210B21DE200EAD3C2 /* NSWindow-NoodleEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSWindow-NoodleEffects.m"; path = "src/mondoTextField/noodlesoft.com/NSWindow-NoodleEffects.m"; sourceTree = "<group>"; };
-		A506C73810B21E5800EAD3C2 /* zoomFieldMini_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldMini_Pressed.png; path = src/mondoTextField/zoomFieldMini_Pressed.png; sourceTree = "<group>"; };
-		A506C73910B21E5800EAD3C2 /* zoomFieldMini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldMini.png; path = src/mondoTextField/zoomFieldMini.png; sourceTree = "<group>"; };
-		A506C73A10B21E5800EAD3C2 /* zoomFieldRegular_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldRegular_Pressed.png; path = src/mondoTextField/zoomFieldRegular_Pressed.png; sourceTree = "<group>"; };
-		A506C73B10B21E5800EAD3C2 /* zoomFieldRegular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldRegular.png; path = src/mondoTextField/zoomFieldRegular.png; sourceTree = "<group>"; };
-		A506C73C10B21E5800EAD3C2 /* zoomFieldSmall_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldSmall_Pressed.png; path = src/mondoTextField/zoomFieldSmall_Pressed.png; sourceTree = "<group>"; };
-		A506C73D10B21E5800EAD3C2 /* zoomFieldSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldSmall.png; path = src/mondoTextField/zoomFieldSmall.png; sourceTree = "<group>"; };
+		A506C70610B21D6C00EAD3C2 /* MondoTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoTextField.h; path = src/framework/mondoTextField/MondoTextField.h; sourceTree = "<group>"; };
+		A506C70710B21D6C00EAD3C2 /* MondoTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoTextField.m; path = src/framework/mondoTextField/MondoTextField.m; sourceTree = "<group>"; };
+		A506C70810B21D6C00EAD3C2 /* MondoTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoTextFieldCell.h; path = src/framework/mondoTextField/MondoTextFieldCell.h; sourceTree = "<group>"; };
+		A506C70910B21D6C00EAD3C2 /* MondoTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoTextFieldCell.m; path = src/framework/mondoTextField/MondoTextFieldCell.m; sourceTree = "<group>"; };
+		A506C70E10B21D7800EAD3C2 /* mondoZoomPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = mondoZoomPanel.xib; path = src/framework/mondoTextField/mondoZoomPanel.xib; sourceTree = "<group>"; };
+		A506C72810B21D9400EAD3C2 /* MondoZoomWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoZoomWindowController.h; path = src/framework/mondoTextField/MondoZoomWindowController.h; sourceTree = "<group>"; };
+		A506C72910B21D9400EAD3C2 /* MondoZoomWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoZoomWindowController.m; path = src/framework/mondoTextField/MondoZoomWindowController.m; sourceTree = "<group>"; };
+		A506C72F10B21DD700EAD3C2 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SynthesizeSingleton.h; path = src/framework/mondoTextField/cocoawithlove.com/SynthesizeSingleton.h; sourceTree = "<group>"; };
+		A506C73110B21DE200EAD3C2 /* NSWindow-NoodleEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSWindow-NoodleEffects.h"; path = "src/framework/mondoTextField/noodlesoft.com/NSWindow-NoodleEffects.h"; sourceTree = "<group>"; };
+		A506C73210B21DE200EAD3C2 /* NSWindow-NoodleEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSWindow-NoodleEffects.m"; path = "src/framework/mondoTextField/noodlesoft.com/NSWindow-NoodleEffects.m"; sourceTree = "<group>"; };
+		A506C73810B21E5800EAD3C2 /* zoomFieldMini_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldMini_Pressed.png; path = src/framework/mondoTextField/zoomFieldMini_Pressed.png; sourceTree = "<group>"; };
+		A506C73910B21E5800EAD3C2 /* zoomFieldMini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldMini.png; path = src/framework/mondoTextField/zoomFieldMini.png; sourceTree = "<group>"; };
+		A506C73A10B21E5800EAD3C2 /* zoomFieldRegular_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldRegular_Pressed.png; path = src/framework/mondoTextField/zoomFieldRegular_Pressed.png; sourceTree = "<group>"; };
+		A506C73B10B21E5800EAD3C2 /* zoomFieldRegular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldRegular.png; path = src/framework/mondoTextField/zoomFieldRegular.png; sourceTree = "<group>"; };
+		A506C73C10B21E5800EAD3C2 /* zoomFieldSmall_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldSmall_Pressed.png; path = src/framework/mondoTextField/zoomFieldSmall_Pressed.png; sourceTree = "<group>"; };
+		A506C73D10B21E5800EAD3C2 /* zoomFieldSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zoomFieldSmall.png; path = src/framework/mondoTextField/zoomFieldSmall.png; sourceTree = "<group>"; };
 		A506C74A10B21F9A00EAD3C2 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		A506C80E10B2207F00EAD3C2 /* MondoTextFieldIBIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MondoTextFieldIBIcon.png; path = src/Plugin/images/MondoTextFieldIBIcon.png; sourceTree = "<group>"; };
 		A506C82110B2235200EAD3C2 /* MondoTextField.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = MondoTextField.classdescription; path = src/Plugin/MondoTextField.classdescription; sourceTree = "<group>"; };
@@ -196,6 +197,7 @@
 		A549948610BA00E3002DB989 /* MondoTextFieldInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoTextFieldInspector.m; path = src/Plugin/MondoTextFieldInspector.m; sourceTree = "<group>"; };
 		A54995E710BF3423002DB989 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A549975010BF4052002DB989 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = test/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A549982910C19FCF002DB989 /* CocoaMondoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaMondoKit.h; path = src/framework/CocoaMondoKit.h; sourceTree = "<group>"; };
 		C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file.xib; name = MondoTextFieldInspector.xib; path = English.lproj/MondoTextFieldInspector.xib; sourceTree = "<group>"; };
 		C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = /Developer/Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = "<absolute>"; };
 		D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = CocoaMondoKitLibrary.nib; path = English.lproj/CocoaMondoKitLibrary.nib; sourceTree = "<group>"; };
@@ -260,11 +262,6 @@
 		0259C582FE90428111CA0C5A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A506C73610B21E2B00EAD3C2 /* images */,
-				A506C70E10B21D7800EAD3C2 /* mondoZoomPanel.xib */,
-				8D1AC9730486D14A00FE50C9 /* Info.plist */,
-				53DF68FE067E5B5A0090B5B0 /* CocoaMondoKit-Info.plist */,
-				8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -272,6 +269,8 @@
 		131E8FE8067F80F40006E0CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */,
+				8D1AC9730486D14A00FE50C9 /* Info.plist */,
 				A506C80D10B2206A00EAD3C2 /* images */,
 				D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */,
 				C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */,
@@ -363,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				C0894DA40C32F4C100401507 /* Classes */,
+				A549983710C1A117002DB989 /* Resources */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
@@ -467,10 +467,21 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		A549983710C1A117002DB989 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53DF68FE067E5B5A0090B5B0 /* CocoaMondoKit-Info.plist */,
+				A506C73610B21E2B00EAD3C2 /* images */,
+				A506C70E10B21D7800EAD3C2 /* mondoZoomPanel.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		C0894DA40C32F4C100401507 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				A506C70410B21D5500EAD3C2 /* mondoTextField */,
+				A549982910C19FCF002DB989 /* CocoaMondoKit.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -483,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A549953610BB5141002DB989 /* MondoTextField.h in Headers */,
+				A549982A10C19FCF002DB989 /* CocoaMondoKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
