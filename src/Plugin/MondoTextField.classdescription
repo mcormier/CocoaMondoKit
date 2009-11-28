@@ -1,11 +1,11 @@
 {
 	Actions = {
 		// Define action descriptions here, for example
-		// "myAction:" = id;
+		// "takeWindowTitleValueFrom:" = id;
 	};
 	Outlets = {
 		// Define outlet descriptions here, for example
-		// labelTextField = NSTextField;
+		 windowTitleTextField = NSTextField;
 	};
     ClassName = MondoTextField; 
     SuperClass = NSTextField; 
