@@ -47,7 +47,6 @@ static NSInteger HORIZ_MARGIN = 3;
 static NSInteger BUTTON_RIGHT_MARGIN = 2;
 
 - (id)initWithCoder:(NSCoder *)decoder {
-  
   if (self = [super initWithCoder:decoder] ) {    
     [self setWindowTitle:[decoder decodeObjectForKey:@"MondoWindowTitle"]];
     
@@ -175,8 +174,7 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
 }
 
 - (void)setStringValue:(NSString *)aString {
-  //[super setStringValue:aString];
-  [super setStringValue:@"blah"];
+  [super setStringValue:aString];
   [self sendChangeNotification];
 }
 
@@ -213,7 +211,21 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
 }
 
 - (NSString*) fieldLabel {
-  return windowTitle;
+  // Window title was set in the inspector 
+  // attributes.
+  if(windowTitle) {
+    return windowTitle;    
+  }
+  
+  // We are binding to a textfield label.
+  NSString* title =  [windowTitleTextField stringValue];
+  if(title) {
+    return title;
+  }
+  
+  // Someone was lazy and didn't set a title.  Show the 
+  // window with a blank title.
+  return @"";
 }
 
 @end
