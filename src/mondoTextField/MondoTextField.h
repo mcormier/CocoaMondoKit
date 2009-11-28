@@ -22,8 +22,17 @@
 
 @interface MondoTextField : NSTextField {
 
-  
+  // The title for the zoom window can be set in one of two places.
+  //
+  // 1. You can directly set "Window Title" in inspector field attributes
+  // tab in Interface Builder. 
+  //
+  // 2. You can bind to an NSTextField.  
+  //
+  // When setting the title of the zoomed window, option 1 is checked and then option 2.
+  //
   NSString *windowTitle;
+  IBOutlet NSTextField* windowTitleTextField;
   
 @private
   NSButton * zoomButton;
