@@ -26,14 +26,27 @@
 #define INVISIBLE 0.0
 #define VISIBLE 1.0
 
-#define SMALL_BUTTON 19
-#define MINI_BUTTON 15
+#define SMALL_TEXTFIELD 19
+
+// Textfields created in interface builder with a size of mini on Leopard
+// had a height of 15 pixels.
+// Textfields created in interface builder with a size of mini on Snow
+// Leopard have a height of 16 pixels.
+#define MINI_TEXTFIELD_LEOPARD 15       // OS X 10.5
+#define MINI_TEXTFIELD_SNOW_LEOPARD 16  // OS X 10.6
 
 @interface MondoTextField (private)
-  -(void)positionButton;
+  -(void)positionButton:(NSRect)forFrame;
   -(void)displayButtonIfNeeded;
   -(void)setupListeners;
   -(void)sendChangeNotification;
+  -(NSButton*)createButtonForControlHeight;
+  -(void)createMondoTextFieldCell;
+
+  // The zoom button should always be accessed from this method.
+  // The MondoTextField only has one subview so it grabs that view.
+  // If the button isn't present then it creates it.
+  -(NSButton*)zoomButton;
 @end
 
 
@@ -49,36 +62,6 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
 - (id)initWithCoder:(NSCoder *)decoder {
   if (self = [super initWithCoder:decoder] ) {    
     [self setWindowTitle:[decoder decodeObjectForKey:@"MondoWindowTitle"]];
-    
-    int buttonHeight = NSHeight([self frame]);
-    
-    // Check the size. Is it a regular, small or mini control?
-    // The button must be created before the custom cell because the cell
-    // needs to know the width of the button. 
-    switch (buttonHeight) {
-      case SMALL_BUTTON:
-        zoomButton = [[MondoZoomWindowController sharedMondoZoomWindowController] getSmallButton];
-        break;
-      case MINI_BUTTON:
-        zoomButton = [[MondoZoomWindowController sharedMondoZoomWindowController] getMiniButton];
-        break;
-      default:
-        zoomButton = [[MondoZoomWindowController sharedMondoZoomWindowController] getRegularButton];
-        break;
-    }
-    
-    [zoomButton setFocusRingType:NSFocusRingTypeNone];
-    [self positionButton];
-    [self addSubview:zoomButton];
-    
-    // Add +1 for margin
-    MondoTextFieldCell *mondoCell = [[MondoTextFieldCell alloc] initWithButtonWidth:[[zoomButton image] size].width + 1 andCell:[self cell]];
-    [self setDelegate:mondoCell];
-    [self setCell:mondoCell];
-    [mondoCell release];
-    
-    
-
   }
   return self;
 }
@@ -88,22 +71,78 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
   [coder encodeObject:[self windowTitle] forKey:@"MondoWindowTitle"];
 }
 
+- (void)createMondoTextFieldCell {
+  MondoTextFieldCell *mondoCell = [[MondoTextFieldCell alloc] initWithCell:[self cell]];
+  
+  [self setDelegate:mondoCell];
+  [self setCell:mondoCell];
+  [mondoCell release];  
+}
+
+-(NSButton*)zoomButton {
+  NSButton* zoomButton;
+  
+  @try {
+    zoomButton = [[self subviews] objectAtIndex:0];
+  } 
+  @catch (NSException *e) {
+    if ( [[e name] caseInsensitiveCompare:NSRangeException] == NSOrderedSame) {
+      zoomButton = [self createButtonForControlHeight];
+    } else{
+      NSLog(@"Unexpected error...");
+    }
+    
+  }
+  return zoomButton;
+}
+
+-(NSButton*)createButtonForControlHeight {
+  int buttonHeight = NSHeight([self frame]);
+  
+  NSButton *zoomButton;
+  // Check the size. Is it a regular, small or mini control?
+  // The button must be created before the custom cell because the cell
+  // needs to know the width of the button. 
+  switch (buttonHeight) {
+    case SMALL_TEXTFIELD:
+      zoomButton = [[MondoZoomWindowController sharedMondoZoomWindowController] getSmallButton];
+      break;
+    case MINI_TEXTFIELD_LEOPARD:
+    case MINI_TEXTFIELD_SNOW_LEOPARD:
+      zoomButton = [[MondoZoomWindowController sharedMondoZoomWindowController] getMiniButton];
+      break;
+    default:
+      zoomButton = [[MondoZoomWindowController sharedMondoZoomWindowController] getRegularButton];
+      break;
+  }
+  
+  // We will be fading the button in and out so
+  // the appearance of the button is not abrupt to the user.
+  zoomButton.wantsLayer = YES;  
+  [zoomButton setFocusRingType:NSFocusRingTypeNone];
+  [self setSubviews:[NSArray arrayWithObject:zoomButton]];
+    
+  [self positionButton:[self frame]];
+  
+  MondoTextFieldCell *mondoCell = [self cell];
+  [mondoCell setButtonSize:[[zoomButton image] size]];
+  
+  return zoomButton;
+}
+
 - (void)awakeFromNib {
   _attrDict = [[NSDictionary dictionaryWithObject: [self font] forKey:NSFontAttributeName] retain];
   
+  [self createMondoTextFieldCell];
+  [self createButtonForControlHeight];
   // We don't want any animation on startup
   // Prevents the button from being displayed for a split second
   // and fading out.
   [[NSAnimationContext currentContext] setDuration:0.0];
   [self displayButtonIfNeeded];
-  
-  // We will be fading the button in and out so
-  // the appearance of the button is not abrupt to the user.
-  zoomButton.wantsLayer = YES;
 
   [self setupListeners];
 }
-
 
 -(void)setupListeners {
   [[NSNotificationCenter defaultCenter]
@@ -116,13 +155,15 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
    selector:@selector(windowBecameOrResignedKey:)
    name:NSWindowDidResignKeyNotification object:[self window]];
   
+  NSButton* zoomButton = [self zoomButton];
+  
   [zoomButton setTarget: self];
   [zoomButton setAction: @selector(zoomButtonPressed:)];
 
 }
 
 - (void) zoomButtonPressed: (id) sender {
-  
+   NSButton* zoomButton = [self zoomButton];
   // The button is invisible so act like it doesn't exist.  
   if ( [zoomButton alphaValue] == INVISIBLE ) {
     NSRange selectLastPosition;
@@ -157,15 +198,28 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
 }
 
 - (void)setFrame:(NSRect)frameRect {
+  // SetFrame is called Interface Builder when changing the size
+  // of the component.
+  if ( NSHeight([self frame]) != NSHeight(frameRect) ) {    
+   // NSLog(@"The height changed, we need to re-evaluate the size of the button");
+    [self createButtonForControlHeight];
+  }
+  
+  if ( NSWidth([self frame]) != NSWidth(frameRect) ) {    
+    //NSLog(@"The width changed, we need to re-evaluate the position of the button");
+    [self positionButton:frameRect];
+  }
+  
+  
   [super setFrame:frameRect];
-  [self positionButton];
+
   [self displayButtonIfNeeded];
 }
 
-- (void)positionButton {
-  NSRect myFrame = [self frame];
+- (void)positionButton:(NSRect)forFrame {
+   NSButton* zoomButton = [self zoomButton];
   NSSize buttonSize = [[zoomButton image] size];
-  [zoomButton setFrame:NSMakeRect( NSWidth(myFrame) - (buttonSize.width + BUTTON_RIGHT_MARGIN) , 1, buttonSize.width, buttonSize.height)];
+  [zoomButton setFrame:NSMakeRect( NSWidth(forFrame) - (buttonSize.width + BUTTON_RIGHT_MARGIN) , 1, buttonSize.width, buttonSize.height)];
 }
 
 - (void)windowBecameOrResignedKey:(NSNotification *)aNotification {
@@ -198,9 +252,9 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
 -(void)displayButtonIfNeeded {
   // The cell is inset from TextField frame so we add 1 plus 2 for the margin on the right.  Otherwise the button
   // appears one character too late.
+  NSButton* zoomButton = [self zoomButton];
   float textViewportWidth = NSWidth([self frame]) - ([[zoomButton image] size].width + HORIZ_MARGIN * 2);
   BOOL buttonVisible = [self stringWidth] > textViewportWidth;
-  
   [[zoomButton animator] setAlphaValue: (buttonVisible ? VISIBLE : INVISIBLE)];
 }
 
