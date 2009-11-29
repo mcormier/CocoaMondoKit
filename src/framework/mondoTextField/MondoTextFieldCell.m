@@ -29,10 +29,10 @@
 
 @implementation MondoTextFieldCell
 
-- (id)initWithButtonWidth:(float)buttonWidth andCell:(NSTextFieldCell*)oldCell {
+- (id)initWithCell:(NSTextFieldCell*)oldCell {
 	self = [super initTextCell:[oldCell stringValue]];
 	if (self) {
-    _buttonWidth = buttonWidth;
+    _buttonSize = NSZeroSize;
     
     // Grab the properties of the old cell define in Interface Builder
     [self setContinuous:[oldCell isContinuous]];
@@ -73,11 +73,13 @@
 }
 
 - (NSRect)textRectForFrame:(NSRect)frame {  
-  frame.size.width -= _buttonWidth;     
+  frame.size.width -= _buttonSize.width;     
   return frame;
 }
 
-
+- (void)setButtonSize:(NSSize)size {
+  _buttonSize = size;
+}
 
 @end
 

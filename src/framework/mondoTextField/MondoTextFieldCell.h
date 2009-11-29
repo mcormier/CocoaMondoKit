@@ -27,10 +27,11 @@
 @interface MondoTextFieldCell : NSTextFieldCell {
 
 @private
-  float _buttonWidth;
+  NSSize _buttonSize;
 }
 
-- (id)initWithButtonWidth:(float)buttonWidth andCell:(NSTextFieldCell*)oldCell;
+- (id)initWithCell:(NSTextFieldCell*)oldCell;
+- (void)setButtonSize:(NSSize)size;
 
 @end
 
