@@ -60,6 +60,9 @@
 		A549975110BF4052002DB989 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A549974F10BF4052002DB989 /* MainMenu.xib */; };
 		A549975210BF4052002DB989 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A549974F10BF4052002DB989 /* MainMenu.xib */; };
 		A549982A10C19FCF002DB989 /* CocoaMondoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A549982910C19FCF002DB989 /* CocoaMondoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5499ACA10C2F60F002DB989 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */; };
+		A5499ACD10C2F62D002DB989 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */; };
+		A5499AD210C2F63D002DB989 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */; };
 		C08787290A49DE9A00E9B151 /* CocoaMondoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* CocoaMondoKit.m */; };
 		C0A47C500A523B730004BDC3 /* MondoTextFieldInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */; };
 		D1AEDE470A6C289C0010C343 /* CocoaMondoKitLibrary.nib in Resources */ = {isa = PBXBuildFile; fileRef = D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */; };
@@ -198,6 +201,7 @@
 		A54995E710BF3423002DB989 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A549975010BF4052002DB989 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = test/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A549982910C19FCF002DB989 /* CocoaMondoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaMondoKit.h; path = src/framework/CocoaMondoKit.h; sourceTree = "<group>"; };
+		A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExceptionHandling.framework; path = System/Library/Frameworks/ExceptionHandling.framework; sourceTree = SDKROOT; };
 		C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file.xib; name = MondoTextFieldInspector.xib; path = English.lproj/MondoTextFieldInspector.xib; sourceTree = "<group>"; };
 		C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = /Developer/Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = "<absolute>"; };
 		D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = CocoaMondoKitLibrary.nib; path = English.lproj/CocoaMondoKitLibrary.nib; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 			files = (
 				13F8B89007B43554008AE28D /* Cocoa.framework in Frameworks */,
 				A506C74D10B21FA500EAD3C2 /* Carbon.framework in Frameworks */,
+				A5499AD210C2F63D002DB989 /* ExceptionHandling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +226,7 @@
 				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
 				A506C64310B05B1800EAD3C2 /* CocoaMondoKit.framework in Frameworks */,
 				A54992D310B860A3002DB989 /* InterfaceBuilderKit.framework in Frameworks */,
+				A5499ACD10C2F62D002DB989 /* ExceptionHandling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +236,7 @@
 			files = (
 				A54993CA10B99321002DB989 /* Cocoa.framework in Frameworks */,
 				A54993EC10B99578002DB989 /* CocoaMondoKit.framework in Frameworks */,
+				A5499ACA10C2F60F002DB989 /* ExceptionHandling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,19 +258,11 @@
 				32DBCF9E0370C38000C91783 /* Plugin */,
 				54D33B2C06778E4400C9C163 /* Framework */,
 				A54993A110B9911A002DB989 /* Test */,
-				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
 				A54995E710BF3423002DB989 /* Cocoa.framework */,
 			);
 			name = CocoaMondoKit;
-			sourceTree = "<group>";
-		};
-		0259C582FE90428111CA0C5A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		131E8FE8067F80F40006E0CE /* Resources */ = {
@@ -284,6 +283,7 @@
 				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
 				C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */,
 				A506C74A10B21F9A00EAD3C2 /* Carbon.framework */,
+				A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
