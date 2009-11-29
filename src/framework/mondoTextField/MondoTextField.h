@@ -30,13 +30,12 @@
   // 2. You can bind to an NSTextField.  
   //
   // When setting the title of the zoomed window, option 1 is checked and then option 2.
+  // If all else fails the title is blank.  See the logic in the fieldLabel method.
   //
   NSString *windowTitle;
   IBOutlet NSTextField* windowTitleTextField;
   
-@private
-  NSButton * zoomButton;
-  
+@private  
   // Stores the font information.   
   // Used for calculating the length of the displayed string.
   NSDictionary	*_attrDict;  
