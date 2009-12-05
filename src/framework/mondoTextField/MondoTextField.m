@@ -104,11 +104,9 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
   // The button must be created before the custom cell because the cell
   // needs to know the width of the button. 
   switch (buttonHeight) {
-    case SMALL_TEXTFIELD:
-      zoomButton = [[MondoZoomWindowController sharedMondoZoomWindowController] getSmallButton];
-      break;
     case MINI_TEXTFIELD_LEOPARD:
     case MINI_TEXTFIELD_SNOW_LEOPARD:
+    case SMALL_TEXTFIELD:
       zoomButton = [[MondoZoomWindowController sharedMondoZoomWindowController] getMiniButton];
       break;
     default:
@@ -176,17 +174,6 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
     return;
   }
   
-  // Make sure this textfield is the first responder since the user clicked
-  // the button.  This fixes a UI bug where the first responder flickers
-  // if you switch from one MondoTextField to another using the buttons only.
-  // We must also save the current selection before setting itself self
-  // to first responder or else all text will be selected.
-  NSText *mondoFieldEditor = [[self window] fieldEditor:YES forObject:self];
-  NSRange mondoSelection = [mondoFieldEditor selectedRange];      
-  [[self window] makeFirstResponder:self];
-  [mondoFieldEditor setSelectedRange:mondoSelection];
-  
-  
   [[MondoZoomWindowController sharedMondoZoomWindowController] showWindow:self]; 
   
 }
@@ -201,12 +188,10 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
   // SetFrame is called Interface Builder when changing the size
   // of the component.
   if ( NSHeight([self frame]) != NSHeight(frameRect) ) {    
-   // NSLog(@"The height changed, we need to re-evaluate the size of the button");
     [self createButtonForControlHeight];
   }
   
   if ( NSWidth([self frame]) != NSWidth(frameRect) ) {    
-    //NSLog(@"The width changed, we need to re-evaluate the position of the button");
     [self positionButton:frameRect];
   }
   
@@ -217,9 +202,11 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
 }
 
 - (void)positionButton:(NSRect)forFrame {
-   NSButton* zoomButton = [self zoomButton];
+  NSButton* zoomButton = [self zoomButton];
   NSSize buttonSize = [[zoomButton image] size];
-  [zoomButton setFrame:NSMakeRect( NSWidth(forFrame) - (buttonSize.width + BUTTON_RIGHT_MARGIN) , 1, buttonSize.width, buttonSize.height)];
+  float height = (NSHeight(forFrame) - (buttonSize.height)) / 2;  // Centre the button.
+  [zoomButton setFrame:NSMakeRect( NSWidth(forFrame) - (buttonSize.width + BUTTON_RIGHT_MARGIN) , 
+                                  height, buttonSize.width, buttonSize.height)];
 }
 
 - (void)windowBecameOrResignedKey:(NSNotification *)aNotification {
@@ -281,6 +268,7 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
   // window with a blank title.
   return @"";
 }
+
 
 @end
 
