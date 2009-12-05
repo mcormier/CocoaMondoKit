@@ -163,7 +163,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MondoZoomWindowController);
 
 - (void)setBestWindowSize {  
   NSRect windowFrame = [zoomPanel frame];
-  windowFrame.size.width += [self.currentMondoField stringWidth] - NSWidth([zoomTextField frame]);
+  NSString *string = [self.currentMondoField stringValue];
+  float stringWidth = [string sizeWithAttributes:_attrDict].width;
+  
+  windowFrame.size.width += stringWidth - NSWidth([zoomTextField frame]);
   windowFrame.size.width += 100;  // Make the text field slightly larger than the entire text
   
   // Consider the minimize size for the window set in the XIB
