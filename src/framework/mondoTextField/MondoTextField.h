@@ -44,6 +44,5 @@
 @property(retain) NSString* windowTitle;
 
 - (NSString*) fieldLabel;
-- (float) stringWidth;
 
 @end
