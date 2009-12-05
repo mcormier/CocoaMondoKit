@@ -47,6 +47,7 @@
   // The MondoTextField only has one subview so it grabs that view.
   // If the button isn't present then it creates it.
   -(NSButton*)zoomButton;
+  - (float) stringWidth;
 @end
 
 
