@@ -28,12 +28,12 @@
 
 @interface MondoZoomWindowController (Private)
 -(NSButton*)makeButtonWithImageName:(NSString*)imgName andAltImage:(NSString*)altImgName;
--(void)transferSelection:(NSTextField*)fromField to:(NSTextField*)toField;
+-(void)transferSelection:(MondoTextField*)fromField to:(NSTextField*)toField;
 -(NSRect)getMinimizeRect;  
 -(void)setBestWindowSize;
 -(void)closeFocusWindow;
 
-// Don't use property/synthesize.
+// Don't use property/synthesize.  We want these methods to be private.
 -(MondoTextField*)currentMondoField;
 -(void)setCurrentMondoField:(MondoTextField*)newCurrentField;
 @end
@@ -65,7 +65,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MondoZoomWindowController);
   [zoomPanel setDelegate:self];
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChanged:) 
-																							 name:@"NSControlTextDidChangeNotification" object:zoomTextField ];
+                                               name:@"NSControlTextDidChangeNotification" object:zoomTextField ];
 
 }
 
@@ -201,12 +201,37 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MondoZoomWindowController);
 }
 
 
-- (void)transferSelection:(NSTextField*)fromField to:(NSTextField*)toField {
-  
-  NSText *mondoFieldEditor = [[fromField window] fieldEditor:YES forObject:fromField];
-  NSRange mondoSelection = [mondoFieldEditor selectedRange];    
-  
+// From ** Text System Overview  ** 
+// - Text Fields, Text Views, and the Field Editor
+//
+// "The field editor is a single NSTextView object that is shared among
+// all the controls, including text fields, in a window."
+//
+// 1. Get the fieldEditor (NSText) from the MondoTextField's window.
+// 2. Check to see if the MondoTextField is the current delegate of
+//    the fieldEditor
+// 3. Transfer the selection if the MondoTextField is the current delegate.
+//
+- (void)transferSelection:(MondoTextField*)fromField to:(NSTextField*)toField {
+      
+  NSWindow *window = [fromField window];
+  NSText *fieldEditor = [window fieldEditor:YES forObject:nil];    
+  BOOL fromFieldSelected = [fieldEditor delegate] == fromField;
+    
+  NSText *mondoFieldEditor = [window fieldEditor:YES forObject:fromField];
 
+  NSRange mondoSelection = [mondoFieldEditor selectedRange]; 
+  [[fromField window] makeFirstResponder:fromField];
+  
+  // Another text field was selected and the button
+  // was pushed.  Do not transfer the selection to 
+  // new field.
+  if (!fromFieldSelected) {
+    mondoSelection.length = 0;
+    mondoSelection.location = 0;
+  }
+  [mondoFieldEditor setSelectedRange:mondoSelection];
+  
   [[toField window] makeFirstResponder:toField];
   NSText *zoomFieldEditor = [[toField window] fieldEditor:YES forObject:toField];
   [zoomFieldEditor setSelectedRange:mondoSelection];  
