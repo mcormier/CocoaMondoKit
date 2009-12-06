@@ -105,8 +105,10 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
   switch (buttonHeight) {
     case MINI_TEXTFIELD_LEOPARD:
     case MINI_TEXTFIELD_SNOW_LEOPARD:
-    case SMALL_TEXTFIELD:
       zoomButton = [[MondoZoomWindowController sharedMondoZoomWindowController] getMiniButton];
+      break;      
+    case SMALL_TEXTFIELD:
+      zoomButton = [[MondoZoomWindowController sharedMondoZoomWindowController] getSmallButton];
       break;
     default:
       zoomButton = [[MondoZoomWindowController sharedMondoZoomWindowController] getRegularButton];
