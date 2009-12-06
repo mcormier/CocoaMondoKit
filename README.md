@@ -15,7 +15,6 @@ Interface Builder. (Notez Bien: Interface builder will reference
 the file instead of copying it.  Keep the .ibplugin file in a 
 location it won't be deleted.)
  3. In the Xcode project you want to use the plugin:
- 
 *  Right click the Linked Frameworks folder and click **Add -> Existing Frameworks**.  
 *  Select the CocoaMondoKit.framework directory.
 *  Right click your target and click 
