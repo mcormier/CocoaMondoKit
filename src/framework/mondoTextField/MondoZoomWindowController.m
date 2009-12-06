@@ -90,6 +90,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MondoZoomWindowController);
   
   [self transferSelection:self.currentMondoField to:zoomTextField];
   
+  [self setBestWindowSize];
+  
   // Don't animate if the window is already visible  
   if ([zoomPanel isVisible]) {
     [zoomPanel makeKeyAndOrderFront:self];    
@@ -97,7 +99,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MondoZoomWindowController);
   }
   
    
-  [self setBestWindowSize];
+
     
   [zoomPanel zoomOnFromRect:[self getMinimizeRect]];
   
@@ -169,7 +171,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MondoZoomWindowController);
   
   // Consider the minimize size for the window set in the XIB
   NSSize minSize = [zoomPanel minSize];
-  if ( windowFrame.size.width < minSize.width) {
+  if ( NSWidth(windowFrame) < minSize.width) {
     windowFrame.size.width = minSize.width;
   }
   
@@ -181,12 +183,19 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MondoZoomWindowController);
     if(NSPointInRect(windowFrame.origin, [screen frame]) ) {
       // If the width of the window is greater than this screen then limit
       // the width to the width of this screen.  
-      if (windowFrame.size.width > [screen frame].size.width ) {
-        windowFrame.size.width = [screen frame].size.width; }
+      if ( NSWidth(windowFrame) > NSWidth([screen frame]) ) {
+        windowFrame.size.width = NSWidth([screen frame]); }
     }
   }
-    
-  [zoomPanel setFrame:windowFrame display:NO ];
+  
+  // This ifcould be simplified by inverting the boolean logic.
+  if ([zoomPanel isVisible] && NSWidth([zoomPanel frame]) > NSWidth(windowFrame)  ) { 
+    // Do nothing.  Never grow smaller if the window is already in view.
+    // No need for superfluous animations.    
+  } else {  
+    BOOL isVis = [zoomPanel isVisible];
+    [zoomPanel setFrame:windowFrame display:isVis animate:isVis];
+  }
 }
 
 
