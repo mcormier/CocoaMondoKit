@@ -5,6 +5,7 @@ CocoaMondoKit is an Interface Builder plugin. The plugin currently only
 contains one interface  component. The Zoomable Text Field; formally 
 known as the [Mondo Text Field][1].
 
+<img align="center" src="http://mcormier.github.com/CocoaMondoKit/images/Library.png">
 
 Usage
 -----
