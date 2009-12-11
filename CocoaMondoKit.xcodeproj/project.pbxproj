@@ -63,6 +63,15 @@
 		A5499ACA10C2F60F002DB989 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */; };
 		A5499ACD10C2F62D002DB989 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */; };
 		A5499AD210C2F63D002DB989 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */; };
+		A5EFB8A910CDC908009EFCEB /* MondoSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFB8A610CDC908009EFCEB /* MondoSwitch.h */; };
+		A5EFB8B410CDCA74009EFCEB /* MondoSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EFB8A710CDC908009EFCEB /* MondoSwitch.m */; };
+		A5EFB93110CF0C79009EFCEB /* MondoSwitchButtonCALayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFB92F10CF0C79009EFCEB /* MondoSwitchButtonCALayer.h */; };
+		A5EFB93210CF0C79009EFCEB /* MondoSwitchButtonCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EFB93010CF0C79009EFCEB /* MondoSwitchButtonCALayer.m */; };
+		A5EFB93F10CF244E009EFCEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EFB93910CF2444009EFCEB /* QuartzCore.framework */; };
+		A5EFB94010CF2450009EFCEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EFB93910CF2444009EFCEB /* QuartzCore.framework */; };
+		A5EFB94110CF2451009EFCEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EFB93910CF2444009EFCEB /* QuartzCore.framework */; };
+		A5EFB97F10CF2574009EFCEB /* PPCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFB97E10CF2574009EFCEB /* PPCommon.h */; };
+		A5EFBC3310D1C3DC009EFCEB /* PPCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EFBC3210D1C3DC009EFCEB /* PPCommon.m */; };
 		C08787290A49DE9A00E9B151 /* CocoaMondoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* CocoaMondoKit.m */; };
 		C0A47C500A523B730004BDC3 /* MondoTextFieldInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */; };
 		D1AEDE470A6C289C0010C343 /* CocoaMondoKitLibrary.nib in Resources */ = {isa = PBXBuildFile; fileRef = D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */; };
@@ -202,6 +211,13 @@
 		A549975010BF4052002DB989 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = test/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A549982910C19FCF002DB989 /* CocoaMondoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaMondoKit.h; path = src/framework/CocoaMondoKit.h; sourceTree = "<group>"; };
 		A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExceptionHandling.framework; path = System/Library/Frameworks/ExceptionHandling.framework; sourceTree = SDKROOT; };
+		A5EFB8A610CDC908009EFCEB /* MondoSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoSwitch.h; path = src/framework/mondoSwitch/MondoSwitch.h; sourceTree = "<group>"; };
+		A5EFB8A710CDC908009EFCEB /* MondoSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoSwitch.m; path = src/framework/mondoSwitch/MondoSwitch.m; sourceTree = "<group>"; };
+		A5EFB92F10CF0C79009EFCEB /* MondoSwitchButtonCALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoSwitchButtonCALayer.h; path = src/framework/mondoSwitch/MondoSwitchButtonCALayer.h; sourceTree = "<group>"; };
+		A5EFB93010CF0C79009EFCEB /* MondoSwitchButtonCALayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoSwitchButtonCALayer.m; path = src/framework/mondoSwitch/MondoSwitchButtonCALayer.m; sourceTree = "<group>"; };
+		A5EFB93910CF2444009EFCEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A5EFB97E10CF2574009EFCEB /* PPCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPCommon.h; path = src/framework/PPCommon.h; sourceTree = "<group>"; };
+		A5EFBC3210D1C3DC009EFCEB /* PPCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPCommon.m; path = src/framework/PPCommon.m; sourceTree = "<group>"; };
 		C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file.xib; name = MondoTextFieldInspector.xib; path = English.lproj/MondoTextFieldInspector.xib; sourceTree = "<group>"; };
 		C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = /Developer/Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = "<absolute>"; };
 		D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = CocoaMondoKitLibrary.nib; path = English.lproj/CocoaMondoKitLibrary.nib; sourceTree = "<group>"; };
@@ -216,6 +232,7 @@
 				13F8B89007B43554008AE28D /* Cocoa.framework in Frameworks */,
 				A506C74D10B21FA500EAD3C2 /* Carbon.framework in Frameworks */,
 				A5499AD210C2F63D002DB989 /* ExceptionHandling.framework in Frameworks */,
+				A5EFB93F10CF244E009EFCEB /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +254,7 @@
 				A54993CA10B99321002DB989 /* Cocoa.framework in Frameworks */,
 				A54993EC10B99578002DB989 /* CocoaMondoKit.framework in Frameworks */,
 				A5499ACA10C2F60F002DB989 /* ExceptionHandling.framework in Frameworks */,
+				A5EFB94010CF2450009EFCEB /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +264,7 @@
 			files = (
 				A54993CB10B99323002DB989 /* Cocoa.framework in Frameworks */,
 				A549944A10B99A74002DB989 /* CocoaMondoKit.framework in Frameworks */,
+				A5EFB94110CF2451009EFCEB /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +313,7 @@
 				13F8B88807B434F6008AE28D /* AppKit.framework */,
 				13F8B88907B434F6008AE28D /* CoreData.framework */,
 				13F8B88A07B434F6008AE28D /* Foundation.framework */,
+				A5EFB93910CF2444009EFCEB /* QuartzCore.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -477,11 +497,25 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		A5EFB8A510CDC88E009EFCEB /* mondoSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				A5EFB8A610CDC908009EFCEB /* MondoSwitch.h */,
+				A5EFB8A710CDC908009EFCEB /* MondoSwitch.m */,
+				A5EFB92F10CF0C79009EFCEB /* MondoSwitchButtonCALayer.h */,
+				A5EFB93010CF0C79009EFCEB /* MondoSwitchButtonCALayer.m */,
+			);
+			name = mondoSwitch;
+			sourceTree = "<group>";
+		};
 		C0894DA40C32F4C100401507 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A5EFB8A510CDC88E009EFCEB /* mondoSwitch */,
 				A506C70410B21D5500EAD3C2 /* mondoTextField */,
 				A549982910C19FCF002DB989 /* CocoaMondoKit.h */,
+				A5EFB97E10CF2574009EFCEB /* PPCommon.h */,
+				A5EFBC3210D1C3DC009EFCEB /* PPCommon.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -495,6 +529,9 @@
 			files = (
 				A549953610BB5141002DB989 /* MondoTextField.h in Headers */,
 				A549982A10C19FCF002DB989 /* CocoaMondoKit.h in Headers */,
+				A5EFB8A910CDC908009EFCEB /* MondoSwitch.h in Headers */,
+				A5EFB93110CF0C79009EFCEB /* MondoSwitchButtonCALayer.h in Headers */,
+				A5EFB97F10CF2574009EFCEB /* PPCommon.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +696,9 @@
 				A506C70D10B21D6C00EAD3C2 /* MondoTextFieldCell.m in Sources */,
 				A506C72B10B21D9400EAD3C2 /* MondoZoomWindowController.m in Sources */,
 				A506C73410B21DE200EAD3C2 /* NSWindow-NoodleEffects.m in Sources */,
+				A5EFB8B410CDCA74009EFCEB /* MondoSwitch.m in Sources */,
+				A5EFB93210CF0C79009EFCEB /* MondoSwitchButtonCALayer.m in Sources */,
+				A5EFBC3310D1C3DC009EFCEB /* PPCommon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
