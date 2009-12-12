@@ -16,7 +16,7 @@
 
 @implementation MondoSwitch
 
-@synthesize on;
+@synthesize on=_on;
 
 #pragma mark -
 #pragma mark init methods
@@ -31,7 +31,7 @@
   
   [self setupLayers];
   
-  NSLog(@"TODO -- bind to childs property.");
+  [self bind:@"on" toObject:buttonLayer withKeyPath:@"on" options:nil];
 }  
 
 -(void)setupLayers {
@@ -101,10 +101,18 @@
 }
 
 #pragma mark -
-#pragma mark propeertyMethods
+#pragma mark propertyMethods
+
+-(void)setOn:(BOOL)on {
+  if (_on == on) { return; }
+  _on = on;
+  [buttonLayer setOn:on];
+}
 
 -(void)setOn:(BOOL)on animated:(BOOL)animated {
-  NSLog(@"TODO -- stub");
+  if (_on == on) { return; }
+  _on = on;
+  [buttonLayer setOn:on animated:animated];
 }
 
 #pragma mark -

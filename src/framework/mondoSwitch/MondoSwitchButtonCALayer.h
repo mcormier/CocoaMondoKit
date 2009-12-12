@@ -22,7 +22,7 @@ typedef enum {
     CALayer* theSwitch;  
     MondoSwitchEventType _currentEventState;  
     CGImageRef notClickedImgRef, clickedImgRef;  
-    BOOL on;
+    BOOL _on;
 }
 
 @property(nonatomic, getter=isOn) BOOL on;

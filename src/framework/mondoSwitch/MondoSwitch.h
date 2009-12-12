@@ -19,7 +19,7 @@
   @private
     NSGradient *bgGradient;
     MondoSwitchButtonCALayer *buttonLayer;
-    BOOL on;
+    BOOL _on;
 }
 
 @property(nonatomic, getter=isOn) BOOL on;

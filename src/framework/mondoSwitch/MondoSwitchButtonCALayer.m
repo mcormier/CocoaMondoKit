@@ -12,7 +12,7 @@
 
 @implementation MondoSwitchButtonCALayer
 
-@synthesize on;
+@synthesize on=_on;
 
 #pragma mark -
 #pragma mark init methods
@@ -76,9 +76,20 @@
 
 #pragma mark -
 #pragma mark propertyMethods
+-(void)setOn:(BOOL)on {
+  if (_on == on ) { return; }
+  [self switchSide];
+}
 
 - (void)setOn:(BOOL)on animated:(BOOL)animated {
-  NSLog(@"Stub method...");
+  if (!animated) {
+    [CATransaction begin];
+    [CATransaction setValue:[NSNumber numberWithFloat:0] forKey:kCATransactionAnimationDuration];
+  }
+  [self switchSide];    
+  if (!animated) {
+    [CATransaction commit];
+  }  
 }
 
 @end
