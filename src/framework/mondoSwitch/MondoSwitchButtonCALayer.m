@@ -57,6 +57,8 @@
   if (_currentEventState == PPcanDragSwitch) {
     [theSwitch setContents:(id)clickedImgRef];
   }
+  
+  _mouseDownPointForCurrentEvent = point;
 }
 
 -(void)mouseUp:(CGPoint)point {
@@ -69,7 +71,7 @@
   
   if (_currentEventState == PPdragOccurred ||  _currentEventState == PPcanDragSwitch) {
     _currentEventState = PPdragOccurred;
-    [self moveSwitch:point.x];   
+    [self moveSwitch:point];    
   }
   
 }
@@ -78,6 +80,7 @@
 #pragma mark propertyMethods
 -(void)setOn:(BOOL)on {
   if (_on == on ) { return; }
+  _on = on;
   [self switchSide];
 }
 
@@ -145,12 +148,32 @@
   _currentEventState = PPNoEvent;  
 }
 
-- (void)moveSwitch:(CGFloat)centrePt {
+- (BOOL)shouldDrag:(CGFloat)dx {
+  if(dx < 0 && theSwitch.frame.origin.x <= 0 ) {
+    return NO;
+  }
+  if (dx > 0 && theSwitch.frame.origin.x >= CGRectGetWidth(self.frame) - CGRectGetWidth(theSwitch.frame)) {
+    return NO;
+  }
+  
+  // TODO -- if delta negative and already to far left exit...
+  
+  // TODO -- if delta positive and already to far right exit...
+  
+  return YES;
+}
+
+- (void)moveSwitch:(CGPoint)point {
   // ignore the request if we are hidden
   if (self.hidden ) return;
   
+  CGFloat dx = point.x - _mouseDownPointForCurrentEvent.x;
+  
+  if (![self shouldDrag:dx] ) { return; }
+  
+  
   CGRect newFrame = theSwitch.frame;
-  CGFloat newX = centrePt - CGRectGetWidth(theSwitch.frame) / 2;
+  CGFloat newX = theSwitch.frame.origin.x + dx;
   CGFloat maxX = CGRectGetWidth(self.frame) - CGRectGetWidth(theSwitch.frame);
   
   if (newX < 0) {
@@ -170,6 +193,7 @@
   }
   [CATransaction commit];
   
+  _mouseDownPointForCurrentEvent = point;
 }
 
 - (CGImageRef)switchImageForPath:(NSBezierPath*)path topColor:(CGFloat)topColor  bottomColor:(CGFloat)bottomColor {  

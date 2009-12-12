@@ -22,6 +22,8 @@ typedef enum {
     CALayer* theSwitch;  
     MondoSwitchEventType _currentEventState;  
     CGImageRef notClickedImgRef, clickedImgRef;  
+    CGPoint _mouseDownPointForCurrentEvent;
+  
     BOOL _on;
 }
 

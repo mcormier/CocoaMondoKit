@@ -10,6 +10,7 @@
 @interface MondoSwitchButtonCALayer (PrivateMethods)
 - (void)createtheSwitch;
 - (void)switchSide;
-- (void)moveSwitch:(CGFloat)dx;
+- (void)moveSwitch:(CGPoint)point;
+- (BOOL)shouldDrag:(CGFloat)dx;
 - (CGImageRef)switchImageForPath:(NSBezierPath*)path topColor:(CGFloat)topColor  bottomColor:(CGFloat)bottomColor;
 @end
