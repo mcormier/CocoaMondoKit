@@ -12,16 +12,17 @@
 // UISwitch reference
 // http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UISwitch_Class/Reference/Reference.html
 
-// Checkbox is an instance of NSButton
-// http://developer.apple.com/mac/library/documentation/cocoa/reference/ApplicationKit/Classes/NSButton_Class/Reference/Reference.html
-//
 @class MondoSwitchButtonCALayer;
 
 @interface MondoSwitch : NSControl {
 
-@private
-  NSGradient *bgGradient;
-  MondoSwitchButtonCALayer *buttonLayer;
+  @private
+    NSGradient *bgGradient;
+    MondoSwitchButtonCALayer *buttonLayer;
+    BOOL on;
 }
 
+@property(nonatomic, getter=isOn) BOOL on;
+
+-(void)setOn:(BOOL)on animated:(BOOL)animated;
 @end

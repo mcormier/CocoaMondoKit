@@ -72,6 +72,8 @@
 		A5EFB94110CF2451009EFCEB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EFB93910CF2444009EFCEB /* QuartzCore.framework */; };
 		A5EFB97F10CF2574009EFCEB /* PPCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFB97E10CF2574009EFCEB /* PPCommon.h */; };
 		A5EFBC3310D1C3DC009EFCEB /* PPCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EFBC3210D1C3DC009EFCEB /* PPCommon.m */; };
+		A5EFBCB610D316DF009EFCEB /* MondoSwitchButtonCALayer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFBCB510D316DF009EFCEB /* MondoSwitchButtonCALayer_Private.h */; };
+		A5EFBCBE10D31743009EFCEB /* MondoSwitch_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFBCBD10D31743009EFCEB /* MondoSwitch_Private.h */; };
 		C08787290A49DE9A00E9B151 /* CocoaMondoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* CocoaMondoKit.m */; };
 		C0A47C500A523B730004BDC3 /* MondoTextFieldInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */; };
 		D1AEDE470A6C289C0010C343 /* CocoaMondoKitLibrary.nib in Resources */ = {isa = PBXBuildFile; fileRef = D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */; };
@@ -218,6 +220,8 @@
 		A5EFB93910CF2444009EFCEB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A5EFB97E10CF2574009EFCEB /* PPCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPCommon.h; path = src/framework/PPCommon.h; sourceTree = "<group>"; };
 		A5EFBC3210D1C3DC009EFCEB /* PPCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPCommon.m; path = src/framework/PPCommon.m; sourceTree = "<group>"; };
+		A5EFBCB510D316DF009EFCEB /* MondoSwitchButtonCALayer_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoSwitchButtonCALayer_Private.h; path = src/framework/mondoSwitch/MondoSwitchButtonCALayer_Private.h; sourceTree = "<group>"; };
+		A5EFBCBD10D31743009EFCEB /* MondoSwitch_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoSwitch_Private.h; path = src/framework/mondoSwitch/MondoSwitch_Private.h; sourceTree = "<group>"; };
 		C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file.xib; name = MondoTextFieldInspector.xib; path = English.lproj/MondoTextFieldInspector.xib; sourceTree = "<group>"; };
 		C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = /Developer/Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = "<absolute>"; };
 		D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = CocoaMondoKitLibrary.nib; path = English.lproj/CocoaMondoKitLibrary.nib; sourceTree = "<group>"; };
@@ -500,10 +504,12 @@
 		A5EFB8A510CDC88E009EFCEB /* mondoSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				A5EFBCBD10D31743009EFCEB /* MondoSwitch_Private.h */,
 				A5EFB8A610CDC908009EFCEB /* MondoSwitch.h */,
 				A5EFB8A710CDC908009EFCEB /* MondoSwitch.m */,
 				A5EFB92F10CF0C79009EFCEB /* MondoSwitchButtonCALayer.h */,
 				A5EFB93010CF0C79009EFCEB /* MondoSwitchButtonCALayer.m */,
+				A5EFBCB510D316DF009EFCEB /* MondoSwitchButtonCALayer_Private.h */,
 			);
 			name = mondoSwitch;
 			sourceTree = "<group>";
@@ -532,6 +538,8 @@
 				A5EFB8A910CDC908009EFCEB /* MondoSwitch.h in Headers */,
 				A5EFB93110CF0C79009EFCEB /* MondoSwitchButtonCALayer.h in Headers */,
 				A5EFB97F10CF2574009EFCEB /* PPCommon.h in Headers */,
+				A5EFBCB610D316DF009EFCEB /* MondoSwitchButtonCALayer_Private.h in Headers */,
+				A5EFBCBE10D31743009EFCEB /* MondoSwitch_Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

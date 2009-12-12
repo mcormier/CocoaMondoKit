@@ -7,21 +7,19 @@
 //
 
 #import "MondoSwitch.h"
+#import "MondoSwitch_Private.h"
 #import "MondoSwitchButtonCALayer.h"
 #import "PPCommon.h"
 
 // TODO -- make it the right size.
-// TODO -- Double clicking and clicking moves the switch
-// TODO -- use a gradient for the bg color of the button
-// when user releases switch
-
-@interface MondoSwitch (PrivateMethods)
--(void)setupLayers;
--(CGPoint) pointForEvent:(NSEvent *) event;
-@end
 
 
 @implementation MondoSwitch
+
+@synthesize on;
+
+#pragma mark -
+#pragma mark init methods
 
 - (void)awakeFromNib {    
   // draw a basic gradient for the view background
@@ -32,6 +30,8 @@
                                              endingColor:gradientTop];
   
   [self setupLayers];
+  
+  NSLog(@"TODO -- bind to childs property.");
 }  
 
 -(void)setupLayers {
@@ -99,6 +99,16 @@
   [path stroke];
   
 }
+
+#pragma mark -
+#pragma mark propeertyMethods
+
+-(void)setOn:(BOOL)on animated:(BOOL)animated {
+  NSLog(@"TODO -- stub");
+}
+
+#pragma mark -
+#pragma mark mouse methods
 
 - (void) mouseDown: (NSEvent *) event {
   

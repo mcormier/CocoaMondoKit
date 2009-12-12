@@ -7,23 +7,15 @@
 //
 
 #import "MondoSwitchButtonCALayer.h"
+#import "MondoSwitchButtonCALayer_Private.h"
 #import "PPCommon.h"
-
-#define WHITE_COLOR CGColorCreateGenericRGB(1.0f,1.0f,1.0f,1.0f)
-#define GREY_COLOR CGColorCreateGenericRGB(0.95294118f,0.95294118f,0.95294118f,1.0f)
-#define BLUE_COLOR CGColorCreateGenericRGB(0.0f,0.0f,1.0f,1.0f)
-
-// TODO use button gradient of 253 -> 230
-
-@interface MondoSwitchButtonCALayer (PrivateMethods)
-- (void)createtheSwitch;
-- (void)switchSide;
-- (void)moveSwitch:(CGFloat)dx;
-@end
 
 @implementation MondoSwitchButtonCALayer
 
 @synthesize on;
+
+#pragma mark -
+#pragma mark init methods
 
 - (id) init {
   [super init];
@@ -31,14 +23,9 @@
   self.cornerRadius = 5.0;
   self.masksToBounds = YES;
   self.borderWidth = 0;
-  //self.borderColor = WHITE_COLOR;
-  //self.backgroundColor = WHITE_COLOR;
   self.bounds = CGRectMake(00, 00, 20, 20);
   self.anchorPoint = CGPointMake(0.0, 0.0);
 
-  //self.opacity = 0.0;
-  
-  //self.frame = CGRectMake(0, 0, 40, 40);
   [self addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMinY relativeTo:@"superlayer" attribute:kCAConstraintMinY]];
   [self addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMinX relativeTo:@"superlayer" attribute:kCAConstraintMinX]];
   
@@ -52,6 +39,11 @@
   return self;
 }
 
+- (void) dealloc {
+  CGImageRelease(notClickedImgRef);
+  CGImageRelease(clickedImgRef);
+  [super dealloc];
+}
 
 
 
@@ -61,10 +53,15 @@
 -(void)mouseDown:(CGPoint)point {
   _currentEventState = CGRectContainsPoint ( theSwitch.frame, point )  
                        ? PPcanDragSwitch : PPstandardMouseDown;
+
+  if (_currentEventState == PPcanDragSwitch) {
+    [theSwitch setContents:(id)clickedImgRef];
+  }
 }
 
 -(void)mouseUp:(CGPoint)point {
     [self switchSide];
+    [theSwitch setContents:(id)notClickedImgRef];
 }
 
 
@@ -77,12 +74,16 @@
   
 }
 
+#pragma mark -
+#pragma mark propertyMethods
+
 - (void)setOn:(BOOL)on animated:(BOOL)animated {
   NSLog(@"Stub method...");
 }
 
 @end
 
+#pragma mark -
 @implementation MondoSwitchButtonCALayer (PrivateMethods)
 
 - (void) createtheSwitch {
@@ -94,71 +95,42 @@
   theSwitch.cornerRadius = radius;
   theSwitch.masksToBounds = YES;
   theSwitch.borderWidth = 0.5;
-  //theSwitch.borderColor = BLUE_COLOR;
-  //theSwitch.backgroundColor = BLUE_COLOR;
   theSwitch.bounds = CGRectMake(00, 00, 20, 20);
   theSwitch.anchorPoint = CGPointMake(0.0, 0.0);
-  
-  //self.opacity = 0.5;
-  
+
+  NSLog(@"This shouldn't be hard coded.");
   theSwitch.frame = CGRectMake(0, 0, 40, 40);
   [theSwitch addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMinY relativeTo:@"superlayer" attribute:kCAConstraintMinY]]; 
   [theSwitch addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintHeight relativeTo:@"superlayer" attribute:kCAConstraintHeight]];    
   
   [self addSublayer:theSwitch];
   
-  // TODO -- create image gradient
   NSBezierPath* path = [NSBezierPath bezierPathWithRoundedRect:NSRectFromCGRect(theSwitch.frame) 
                                                        xRadius:radius yRadius:radius];
-  // 253 -> 230
-  NSColor* gradientTop    = [NSColor colorWithCalibratedWhite:0.9921 alpha:1.0];
-  NSColor* gradientBottom = [NSColor colorWithCalibratedWhite:0.8019 alpha:1.0];
-  NSGradient *bgGradient = [[NSGradient alloc] initWithStartingColor:gradientBottom
-                                                endingColor:gradientTop];
-
   
-
-  NSImage* buttonImage = [[NSImage alloc] initWithSize:[path bounds].size];
-  [buttonImage lockFocus];
-  {
-    [bgGradient drawInBezierPath:path angle:90.0];
-  }
-  [buttonImage unlockFocus];
+  // TODO -- magic numbers...
+  notClickedImgRef = [self switchImageForPath:path topColor:0.9921 bottomColor:0.9019];
+  clickedImgRef = [self switchImageForPath:path topColor:0.8745 bottomColor:0.9568];
   
-  CGImageRef imageRef = [PPImageUtils createCGRefFromNSImage:buttonImage];
-  [theSwitch setContents:(id)imageRef];
-  CGImageRelease(imageRef);
-  [buttonImage autorelease];
+  [theSwitch setContents:(id)notClickedImgRef];
   
 }
 
 - (void) switchSide {
   CGRect newFrame = theSwitch.frame;
   CGFloat superWidth = CGRectGetWidth(self.frame);
-  
-  BOOL moveToRight = theSwitch.frame.origin.x == 0;
+    
   if (_currentEventState == PPdragOccurred) {
     CGFloat centre = CGRectGetWidth(self.frame) / 2;
     CGFloat buttonCentre = CGRectGetWidth(theSwitch.frame) / 2 + theSwitch.frame.origin.x;
-    if (buttonCentre > centre) {
-      moveToRight = YES;
-    } else {
-      moveToRight = NO;
-    }
-    
-  }
-  
-  // Slide to the right
-  if (moveToRight) {
-    newFrame.origin.x = superWidth - CGRectGetWidth(newFrame);
+    self.on = buttonCentre > centre ? YES : NO;
   } else {
-    //Slide to the left
-    newFrame.origin.x = 0;
+    self.on = theSwitch.frame.origin.x == 0;
   }
+    
+  newFrame.origin.x = self.on ? superWidth - CGRectGetWidth(newFrame) : 0;
   
-  
-  theSwitch.frame = newFrame;  
-  
+  theSwitch.frame = newFrame;    
   _currentEventState = PPNoEvent;  
 }
 
@@ -187,6 +159,27 @@
   }
   [CATransaction commit];
   
+}
+
+- (CGImageRef)switchImageForPath:(NSBezierPath*)path topColor:(CGFloat)topColor  bottomColor:(CGFloat)bottomColor {  
+  
+  NSColor* gradientTop    = [NSColor colorWithCalibratedWhite:topColor alpha:1.0];
+  NSColor* gradientBottom = [NSColor colorWithCalibratedWhite:bottomColor alpha:1.0];
+  NSGradient *bgGradient = [[NSGradient alloc] initWithStartingColor:gradientBottom
+                                                         endingColor:gradientTop];
+
+  NSImage* buttonImage = [[NSImage alloc] initWithSize:[path bounds].size];
+  [buttonImage lockFocus];
+  {
+    [bgGradient drawInBezierPath:path angle:90.0];
+  }
+  [buttonImage unlockFocus];
+  
+  CGImageRef imgRef = [PPImageUtils createCGRefFromNSImage:buttonImage];
+  [buttonImage release];
+  [bgGradient release];
+  
+  return imgRef;  
 }
 
 
