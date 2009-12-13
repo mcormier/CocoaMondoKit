@@ -9,8 +9,22 @@
 #import <Cocoa/Cocoa.h>
 
 
-// UISwitch reference
-// http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UISwitch_Class/Reference/Reference.html
+
+// This class emulates a switch component.  Switches are uses quite often
+// in the iPhone interface but are not available on the Mac OS X platform.
+//
+// Apple does use a switch for the Time Machine interface but the control
+// is not available in interface builder.
+
+// A switch control is more natural in an iPhone interface than the Mac desktop.
+// So, please don't abuse this control and replace all your checkboxes with
+// switches.  Use common sense.  A good guideline is to use a switch for a 
+// desktop application when the state of the switch has far reaching implications.
+// For example: The switch disables or enables the core functionality of the application.
+
+// Sizing note:
+// The Time Machine Switch on 10.6.2 has a sizing of 93px wide and 27px height.
+//                                   the internal switch is 40px wide or 
 
 @class MondoSwitchButtonCALayer;
 
