@@ -76,6 +76,8 @@
 		A5EFBCBE10D31743009EFCEB /* MondoSwitch_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFBCBD10D31743009EFCEB /* MondoSwitch_Private.h */; };
 		A5EFBDF210D529D1009EFCEB /* Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFBDF010D529D1009EFCEB /* Controller.h */; };
 		A5EFBDF310D529D1009EFCEB /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EFBDF110D529D1009EFCEB /* Controller.m */; };
+		A5EFBE3910D55B53009EFCEB /* MondoSwitch.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = A5EFBE3810D55B53009EFCEB /* MondoSwitch.classdescription */; };
+		A5EFBE4210D55D25009EFCEB /* MondoSwitchIBIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A5EFBE4110D55D25009EFCEB /* MondoSwitchIBIcon.png */; };
 		C08787290A49DE9A00E9B151 /* CocoaMondoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* CocoaMondoKit.m */; };
 		C0A47C500A523B730004BDC3 /* MondoTextFieldInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */; };
 		D1AEDE470A6C289C0010C343 /* CocoaMondoKitLibrary.nib in Resources */ = {isa = PBXBuildFile; fileRef = D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */; };
@@ -226,6 +228,8 @@
 		A5EFBCBD10D31743009EFCEB /* MondoSwitch_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoSwitch_Private.h; path = src/framework/mondoSwitch/MondoSwitch_Private.h; sourceTree = "<group>"; };
 		A5EFBDF010D529D1009EFCEB /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = test/src/Controller.h; sourceTree = "<group>"; };
 		A5EFBDF110D529D1009EFCEB /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Controller.m; path = test/src/Controller.m; sourceTree = "<group>"; };
+		A5EFBE3810D55B53009EFCEB /* MondoSwitch.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.ibClassDescription; name = MondoSwitch.classdescription; path = src/Plugin/MondoSwitch.classdescription; sourceTree = "<group>"; };
+		A5EFBE4110D55D25009EFCEB /* MondoSwitchIBIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MondoSwitchIBIcon.png; path = src/Plugin/images/MondoSwitchIBIcon.png; sourceTree = "<group>"; };
 		C05B20D80A48CB530099B9E5 /* MondoTextFieldInspector.xib */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = file.xib; name = MondoTextFieldInspector.xib; path = English.lproj/MondoTextFieldInspector.xib; sourceTree = "<group>"; };
 		C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = /Developer/Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = "<absolute>"; };
 		D1AEDE460A6C289C0010C343 /* CocoaMondoKitLibrary.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = CocoaMondoKitLibrary.nib; path = English.lproj/CocoaMondoKitLibrary.nib; sourceTree = "<group>"; };
@@ -368,6 +372,7 @@
 		54D33B2406778DD400C9C163 /* Class Descriptions */ = {
 			isa = PBXGroup;
 			children = (
+				A5EFBE3810D55B53009EFCEB /* MondoSwitch.classdescription */,
 				A506C82110B2235200EAD3C2 /* MondoTextField.classdescription */,
 			);
 			name = "Class Descriptions";
@@ -444,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				A506C80E10B2207F00EAD3C2 /* MondoTextFieldIBIcon.png */,
+				A5EFBE4110D55D25009EFCEB /* MondoSwitchIBIcon.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -679,6 +685,8 @@
 				D1AEDE470A6C289C0010C343 /* CocoaMondoKitLibrary.nib in Resources */,
 				A506C80F10B2207F00EAD3C2 /* MondoTextFieldIBIcon.png in Resources */,
 				A506C82210B2235200EAD3C2 /* MondoTextField.classdescription in Resources */,
+				A5EFBE3910D55B53009EFCEB /* MondoSwitch.classdescription in Resources */,
+				A5EFBE4210D55D25009EFCEB /* MondoSwitchIBIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
