@@ -11,9 +11,6 @@
 #import "MondoSwitchButtonCALayer.h"
 #import "PPCommon.h"
 
-// TODO -- make it the right size.
-
-
 @implementation MondoSwitch
 
 @synthesize on=_on;
@@ -35,27 +32,26 @@
 }  
 
 -(void)setupLayers {
-  CGRect viewFrame = NSRectToCGRect( self.frame );
-  viewFrame.origin.y = 0;
-  viewFrame.origin.x = 0;
-  
+   
   // create a layer and match its frame to the view's frame
   self.wantsLayer = YES;
 
   CALayer* mainLayer = self.layer;
   mainLayer.name = @"mainLayer";
+
+  CGRect viewFrame = NSRectToCGRect( self.frame );
+  viewFrame.origin.y = 0;
+  viewFrame.origin.x = 0;  
   mainLayer.frame = viewFrame;
+
   mainLayer.delegate = self;
   
   // causes the layer content to be drawn in -drawRect:
   [mainLayer setNeedsDisplay];
   
-  // Width = 144 Height = 32
   CGFloat midX = CGRectGetMidX( mainLayer.frame );
   CGFloat midY = CGRectGetMidY( mainLayer.frame );
- // midX = 72;
-  // TODO -- why is it returning 253?
- // NSLog(@"midX %f, midy %f", midX, midY);
+
   
   // create a "container" layer for all content layers.
   // same frame as the view's master layer, automatically
@@ -71,8 +67,6 @@
   
   buttonLayer = [MondoSwitchButtonCALayer layer];
   buttonLayer.name = @"switchLayer";
-   
-  
   
   [contentContainer addSublayer:buttonLayer];
   
