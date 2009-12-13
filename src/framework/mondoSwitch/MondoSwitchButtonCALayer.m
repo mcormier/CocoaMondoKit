@@ -12,6 +12,15 @@
 
 @implementation MondoSwitchButtonCALayer
 
+// The grayscale values for the button colors.
+static const CGFloat notClickedTopColor = 0.9921;
+static const CGFloat notClickedBotColor = 0.9019;
+
+static const CGFloat clickedTopColor = 0.8745;
+static const CGFloat clickedBotColor = 0.9568;
+
+static const CGFloat cornerRadius = 5.0;
+
 @synthesize on=_on;
 
 #pragma mark -
@@ -20,17 +29,15 @@
 - (id) init {
   [super init];
   self.autoresizingMask = kCALayerWidthSizable;
-  self.cornerRadius = 5.0;
-  self.masksToBounds = YES;
+  self.cornerRadius = cornerRadius;
   self.borderWidth = 0;
   self.bounds = CGRectMake(00, 00, 20, 20);
-  self.anchorPoint = CGPointMake(0.0, 0.0);
-
-  [self addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMinY relativeTo:@"superlayer" attribute:kCAConstraintMinY]];
-  [self addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMinX relativeTo:@"superlayer" attribute:kCAConstraintMinX]];
   
-	[self addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintWidth relativeTo:@"superlayer" attribute:kCAConstraintWidth]];  
-  [self addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintHeight relativeTo:@"superlayer" attribute:kCAConstraintHeight]];  
+  [self addConstraint:PPConstraint(kCAConstraintMinY, @"superlayer")];
+  [self addConstraint:PPConstraint(kCAConstraintMinX, @"superlayer")];    
+  [self addConstraint:PPConstraint(kCAConstraintWidth, @"superlayer")];
+  [self addConstraint:PPConstraint(kCAConstraintHeight, @"superlayer")];    
+
   [self setLayoutManager:[CAConstraintLayoutManager layoutManager]];
   
   [self createtheSwitch];
@@ -104,27 +111,28 @@
   theSwitch = [CALayer layer];
   [theSwitch retain];
   
-  CGFloat radius = 5.0;
-  
-  theSwitch.cornerRadius = radius;
-  theSwitch.masksToBounds = YES;
+  theSwitch.cornerRadius = cornerRadius;
   theSwitch.borderWidth = 0.5;
-  theSwitch.bounds = CGRectMake(00, 00, 20, 20);
-  theSwitch.anchorPoint = CGPointMake(0.0, 0.0);
 
-  NSLog(@"This shouldn't be hard coded.");
-  theSwitch.frame = CGRectMake(0, 0, 40, 40);
-  [theSwitch addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintMinY relativeTo:@"superlayer" attribute:kCAConstraintMinY]]; 
-  [theSwitch addConstraint:[CAConstraint constraintWithAttribute:kCAConstraintHeight relativeTo:@"superlayer" attribute:kCAConstraintHeight]];    
+
+  
+  // Sizing --
+  // The Time Machine Switch on 10.6.2 has a sizing of 93px wide and 27px height.
+  //                                   the internal switch is 40px wide or 
+  theSwitch.frame = CGRectMake(0, 0, self.frame.size.height * (1 + 40/27), self.frame.size.height);
+  
+  [theSwitch addConstraint:PPConstraint(kCAConstraintMinY, @"superlayer")];
+  [theSwitch addConstraint:PPConstraint(kCAConstraintHeight, @"superlayer")];    
+
+  
   
   [self addSublayer:theSwitch];
   
   NSBezierPath* path = [NSBezierPath bezierPathWithRoundedRect:NSRectFromCGRect(theSwitch.frame) 
-                                                       xRadius:radius yRadius:radius];
+                                                       xRadius:cornerRadius yRadius:cornerRadius];
   
-  // TODO -- magic numbers...
-  notClickedImgRef = [self switchImageForPath:path topColor:0.9921 bottomColor:0.9019];
-  clickedImgRef = [self switchImageForPath:path topColor:0.8745 bottomColor:0.9568];
+  notClickedImgRef = [self switchImageForPath:path topColor:notClickedTopColor bottomColor:notClickedBotColor];
+  clickedImgRef = [self switchImageForPath:path topColor:clickedTopColor bottomColor:clickedBotColor];
   
   [theSwitch setContents:(id)notClickedImgRef];
   
@@ -149,17 +157,17 @@
 }
 
 - (BOOL)shouldDrag:(CGFloat)dx {
+  
+  // if delta negative and already to far left exit...
   if(dx < 0 && theSwitch.frame.origin.x <= 0 ) {
     return NO;
   }
+  
+  // if delta positive and already to far right exit...
   if (dx > 0 && theSwitch.frame.origin.x >= CGRectGetWidth(self.frame) - CGRectGetWidth(theSwitch.frame)) {
     return NO;
   }
-  
-  // TODO -- if delta negative and already to far left exit...
-  
-  // TODO -- if delta positive and already to far right exit...
-  
+
   return YES;
 }
 
