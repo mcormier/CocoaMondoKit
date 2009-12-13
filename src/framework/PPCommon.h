@@ -18,6 +18,9 @@ if ( value ) { \
 value = nil; \
 }
 
+#define PPConstraint(attr, rel) \
+[CAConstraint constraintWithAttribute:attr relativeTo:rel attribute:attr]
+
 
 @interface PPImageUtils : NSObject {
   
