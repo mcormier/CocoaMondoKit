@@ -96,7 +96,7 @@ static const CGFloat cornerRadius = 5.0;
     [CATransaction begin];
     [CATransaction setValue:[NSNumber numberWithFloat:0] forKey:kCATransactionAnimationDuration];
   }
-  [self switchSide];    
+  [self setOn:on];    
   if (!animated) {
     [CATransaction commit];
   }  
