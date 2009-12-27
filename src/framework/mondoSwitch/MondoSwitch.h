@@ -10,7 +10,7 @@
 
 
 
-// This class emulates a switch component.  Switches are uses quite often
+// This class emulates a switch component.  Switches are used quite often
 // in the iPhone interface but are not available on the Mac OS X platform.
 //
 // Apple does use a switch for the Time Machine interface but the control
