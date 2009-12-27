@@ -30,9 +30,11 @@
 
 @interface MondoSwitch : NSView {
 
+  NSGradient *_bgGradient;
+  
   @private
-    NSGradient *bgGradient;
     MondoSwitchButtonCALayer *buttonLayer;
+    CALayer *mainLayer;
     BOOL _on;
 }
 
