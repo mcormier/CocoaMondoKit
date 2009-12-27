@@ -63,6 +63,7 @@
 		A5499ACA10C2F60F002DB989 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */; };
 		A5499ACD10C2F62D002DB989 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */; };
 		A5499AD210C2F63D002DB989 /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */; };
+		A5A16E6610E80D0C00F7414B /* MondoSwitchIBDisplay.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A16E6510E80D0C00F7414B /* MondoSwitchIBDisplay.png */; };
 		A5EFB8A910CDC908009EFCEB /* MondoSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFB8A610CDC908009EFCEB /* MondoSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5EFB8B410CDCA74009EFCEB /* MondoSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EFB8A710CDC908009EFCEB /* MondoSwitch.m */; };
 		A5EFB93110CF0C79009EFCEB /* MondoSwitchButtonCALayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EFB92F10CF0C79009EFCEB /* MondoSwitchButtonCALayer.h */; };
@@ -218,6 +219,7 @@
 		A549975010BF4052002DB989 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = test/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A549982910C19FCF002DB989 /* CocoaMondoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CocoaMondoKit.h; path = src/framework/CocoaMondoKit.h; sourceTree = "<group>"; };
 		A5499AC910C2F60F002DB989 /* ExceptionHandling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExceptionHandling.framework; path = System/Library/Frameworks/ExceptionHandling.framework; sourceTree = SDKROOT; };
+		A5A16E6510E80D0C00F7414B /* MondoSwitchIBDisplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MondoSwitchIBDisplay.png; path = src/Plugin/images/MondoSwitchIBDisplay.png; sourceTree = "<group>"; };
 		A5EFB8A610CDC908009EFCEB /* MondoSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoSwitch.h; path = src/framework/mondoSwitch/MondoSwitch.h; sourceTree = "<group>"; };
 		A5EFB8A710CDC908009EFCEB /* MondoSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MondoSwitch.m; path = src/framework/mondoSwitch/MondoSwitch.m; sourceTree = "<group>"; };
 		A5EFB92F10CF0C79009EFCEB /* MondoSwitchButtonCALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MondoSwitchButtonCALayer.h; path = src/framework/mondoSwitch/MondoSwitchButtonCALayer.h; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 		A506C80D10B2206A00EAD3C2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A5A16E6510E80D0C00F7414B /* MondoSwitchIBDisplay.png */,
 				A506C80E10B2207F00EAD3C2 /* MondoTextFieldIBIcon.png */,
 				A5EFBE4110D55D25009EFCEB /* MondoSwitchIBIcon.png */,
 			);
@@ -690,6 +693,7 @@
 				A506C82210B2235200EAD3C2 /* MondoTextField.classdescription in Resources */,
 				A5EFBE3910D55B53009EFCEB /* MondoSwitch.classdescription in Resources */,
 				A5EFBE4210D55D25009EFCEB /* MondoSwitchIBIcon.png in Resources */,
+				A5A16E6610E80D0C00F7414B /* MondoSwitchIBDisplay.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
