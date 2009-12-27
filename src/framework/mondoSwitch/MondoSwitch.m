@@ -18,6 +18,24 @@
 #pragma mark -
 #pragma mark init methods
 
+// Coder methods are necessary so that everything draws nicely
+// in interface builder.
+- (id)initWithCoder:(NSCoder *)decoder {
+  if (self = [super initWithCoder:decoder] ) {    
+    bgGradient = [decoder decodeObjectForKey:@"bgGradient"];
+    [bgGradient retain];
+    [self setupLayers];
+  }
+  return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder {
+  [super encodeWithCoder:coder];
+  [coder encodeObject:bgGradient forKey:@"bgGradient"];
+}
+
+
+
 - (void)awakeFromNib {    
   // draw a basic gradient for the view background
   NSColor* gradientBottom = [NSColor colorWithCalibratedWhite:0.72 alpha:1.0];
@@ -85,7 +103,6 @@
   NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:dirtyRect
                                                        xRadius:radius
                                                        yRadius:radius];
-
   [bgGradient drawInBezierPath:path angle:90.0];
   
   NSColor* borderColor = [NSColor colorWithCalibratedWhite:0.27 alpha:1.0];
