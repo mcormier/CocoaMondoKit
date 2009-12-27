@@ -10,4 +10,10 @@
 @interface MondoSwitch (PrivateMethods)
 -(void)setupLayers;
 -(CGPoint) pointForEvent:(NSEvent *) event;
+-(void)coreAnimationDrawRect:(NSRect)dirtyRect;
+-(BOOL)isRunningInIB;
+
+-(NSGradient*)gradient;
+-(void)setGradient:(NSGradient*)gradient;
+
 @end
