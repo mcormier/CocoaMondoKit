@@ -95,9 +95,9 @@
 						<reference key="NSSuperview" ref="1000"/>
 						<string key="label">Mondo Switch</string>
 						<string key="identifier">58CCC0F6-EFFD-4248-9822-2AD08C5DBC30</string>
-						<string key="briefDescription">A  switch for the mac desktop</string>
+						<string key="briefDescription">A desktop switch, similar to the Time Machine switch.</string>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString">yadda yadda timemachine yadda.</string>
+							<string key="NSString">This class emulates the Time Machine switch component.  Switches are used quite often in the iPhone interface but are not available on the Mac OS X platform.    A switch control is more natural in an iPhone interface than the Mac desktop. Please don't abuse this control and replace all your checkboxes with switches.  Use common sense.  A good guideline is to use a switch for a desktop application when the state of the switch has far reaching implications. For example: The switch disables or enables the core functionality of the application.</string>
 							<object class="NSDictionary" key="NSAttributes" id="1057259027">
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSArray" key="dict.sortedKeys">
@@ -645,14 +645,6 @@ b2JqZWN0IHRvIGRlcG9zaXQuA</string>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBPartialClassDescription">
-					<string key="className">MondoSwitch</string>
-					<string key="superclassName">NSControl</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">src/framework/mondoSwitch/MondoSwitch.h</string>
-					</object>
-				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">MondoSwitch</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
