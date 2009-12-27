@@ -19,7 +19,7 @@ location it won't be deleted.)
      -  Right click the Linked Frameworks folder and click **Add -> Existing Frameworks**.  
      -  Select the CocoaMondoKit.framework directory.
      -  Right click your target and click 
-**Add -> New Build Phase -> New Copy Files Build Phase**.  For desitination, 
+**Add -> New Build Phase -> New Copy Files Build Phase**.  For destination, 
 select Frameworks, leave the path field blank, and close the window.
      -  Drag the CocoaMondoKit framework from Linked Frameworks to the Copy 
 Files build phase you just added.
