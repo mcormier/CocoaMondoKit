@@ -15,6 +15,7 @@
 
 @synthesize on=_on;
 
+
 #pragma mark -
 #pragma mark init methods
 
@@ -22,39 +23,51 @@
 // in interface builder.
 - (id)initWithCoder:(NSCoder *)decoder {
   if (self = [super initWithCoder:decoder] ) {    
-    bgGradient = [decoder decodeObjectForKey:@"bgGradient"];
-    [bgGradient retain];
-    [self setupLayers];
+    [self setGradient:[decoder decodeObjectForKey:@"bgGradient"]];
+    
   }
   return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)coder {
   [super encodeWithCoder:coder];
-  [coder encodeObject:bgGradient forKey:@"bgGradient"];
+  [coder encodeObject:[self gradient] forKey:@"bgGradient"];
 }
 
 
 
 - (void)awakeFromNib {    
-  // draw a basic gradient for the view background
-  NSColor* gradientBottom = [NSColor colorWithCalibratedWhite:0.72 alpha:1.0];
-  NSColor* gradientTop    = [NSColor colorWithCalibratedWhite:0.46 alpha:1.0];
-  
-	bgGradient = [[NSGradient alloc] initWithStartingColor:gradientBottom
-                                             endingColor:gradientTop];
-  
-  [self setupLayers];
-  
-  [self bind:@"on" toObject:buttonLayer withKeyPath:@"on" options:nil];
+  [self setupLayers];  
 }  
 
+
+-(NSGradient*)gradient {
+  if( !_bgGradient) {
+    // Create a basic gradient for the background
+    NSColor* gradientBottom = [NSColor colorWithCalibratedWhite:0.72 alpha:1.0];
+    NSColor* gradientTop    = [NSColor colorWithCalibratedWhite:0.46 alpha:1.0];
+    
+    _bgGradient = [[NSGradient alloc] initWithStartingColor:gradientBottom
+                                               endingColor:gradientTop];    
+  }
+  return _bgGradient;  
+}
+
+-(void)setGradient:(NSGradient*)gradient {
+  if (_bgGradient == gradient) {
+    return;
+  }
+  PPAssign(_bgGradient, gradient);  
+}
+
+
 -(void)setupLayers {
-   
+  
   // create a layer and match its frame to the view's frame
   self.wantsLayer = YES;
 
-  CALayer* mainLayer = self.layer;
+  mainLayer = self.layer;
+  [mainLayer retain];
   mainLayer.name = @"mainLayer";
 
   CGRect viewFrame = NSRectToCGRect( self.frame );
@@ -66,6 +79,7 @@
   
   // causes the layer content to be drawn in -drawRect:
   [mainLayer setNeedsDisplay];
+  self.layer = mainLayer;
   
   CGFloat midX = CGRectGetMidX( mainLayer.frame );
   CGFloat midY = CGRectGetMidY( mainLayer.frame );
@@ -74,7 +88,8 @@
   // create a "container" layer for all content layers.
   // same frame as the view's master layer, automatically
   // resizes as necessary.    
-  CALayer* contentContainer = [CALayer layer];    
+  CALayer *contentContainer = [CALayer layer];   
+  contentContainer.name = @"contentContainer";
   contentContainer.bounds           = mainLayer.bounds;
   contentContainer.delegate         = self;
   contentContainer.anchorPoint      = CGPointMake(0.5,0.5);
@@ -85,31 +100,55 @@
   
   buttonLayer = [MondoSwitchButtonCALayer layer];
   buttonLayer.name = @"switchLayer";
+  [buttonLayer retain];
   
   [contentContainer addSublayer:buttonLayer];
   
   [contentContainer layoutSublayers];
   [contentContainer layoutIfNeeded]; 
+  
+  [self bind:@"on" toObject:buttonLayer withKeyPath:@"on" options:nil];
 }
 
 - (void) dealloc {
-  PPRelease(bgGradient);
+  PPRelease(buttonLayer);
+  PPRelease(_bgGradient);
   [super dealloc];
 }
 
-- (void)drawRect:(NSRect)dirtyRect {
+
+-(void)coreAnimationDrawRect:(NSRect)dirtyRect {
+  
+  // There is probably a better way to do this, but it works.
+  // When adding the switch to a tabbed preference pane, and
+  // it's parent view is removed, something sets the mainLayer
+  // to null.  This guarantees that the initially setup mainLayer
+  // is always in use.
+  if (self.layer != mainLayer) {
+    self.layer = mainLayer;
+  }
+    
   // Everything else is handled by core animation
   CGFloat radius = 5.0;
   NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:dirtyRect
                                                        xRadius:radius
                                                        yRadius:radius];
-  [bgGradient drawInBezierPath:path angle:90.0];
+  [[self gradient] drawInBezierPath:path angle:90.0];
   
   NSColor* borderColor = [NSColor colorWithCalibratedWhite:0.27 alpha:1.0];
   [borderColor set];
   [path stroke];
-  
 }
+
+- (void)drawRect:(NSRect)dirtyRect {
+  // The logic is pushed to another operation so that 
+  // this logic can still be overridden in Interface Builder
+  // but still used in the Cocoa Simulator. 
+  // See MondoSwitchIntegration.m
+  [self coreAnimationDrawRect:dirtyRect];
+}
+
+
 
 #pragma mark -
 #pragma mark propertyMethods
