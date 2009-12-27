@@ -28,7 +28,7 @@
 
 @class MondoSwitchButtonCALayer;
 
-@interface MondoSwitch : NSControl {
+@interface MondoSwitch : NSView {
 
   @private
     NSGradient *bgGradient;
@@ -39,4 +39,5 @@
 @property(nonatomic, getter=isOn) BOOL on;
 
 -(void)setOn:(BOOL)on animated:(BOOL)animated;
+
 @end
