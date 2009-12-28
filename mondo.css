@@ -564,3 +564,9 @@ table.listing tbody tr:nth-child(even) {
 
 
 /* @end */
+
+div.sequence {
+  width: 448px;
+  overflow:auto;
+  margin-bottom:20px;
+}
