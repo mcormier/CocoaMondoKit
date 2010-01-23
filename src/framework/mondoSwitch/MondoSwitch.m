@@ -111,6 +111,7 @@
 }
 
 - (void) dealloc {
+  PPRelease(mainLayer);
   PPRelease(buttonLayer);
   PPRelease(_bgGradient);
   [super dealloc];
