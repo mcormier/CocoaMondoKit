@@ -13,7 +13,7 @@
 
 @implementation MondoSwitch
 
-@synthesize on=_on;
+@synthesize on, target, action;
 
 
 #pragma mark -
@@ -39,7 +39,6 @@
 - (void)awakeFromNib {    
   [self setupLayers];  
 }  
-
 
 -(NSGradient*)gradient {
   if( !_bgGradient) {
@@ -114,6 +113,7 @@
   PPRelease(mainLayer);
   PPRelease(buttonLayer);
   PPRelease(_bgGradient);
+  PPRelease(target);
   [super dealloc];
 }
 
@@ -154,16 +154,15 @@
 #pragma mark -
 #pragma mark propertyMethods
 
--(void)setOn:(BOOL)on {
-  if (_on == on) { return; }
-  _on = on;
-  [buttonLayer setOn:on];
+-(void)setOn:(BOOL)newState {
+  [self setOn:newState animated:YES];
 }
 
--(void)setOn:(BOOL)on animated:(BOOL)animated {
-  if (_on == on) { return; }
-  _on = on;
-  [buttonLayer setOn:on animated:animated];
+-(void)setOn:(BOOL)newState animated:(BOOL)animated {
+  if (on == newState) { return; }
+  on = newState;
+  [target performSelector:action];
+  [buttonLayer setOn:newState animated:animated];
 }
 
 #pragma mark -

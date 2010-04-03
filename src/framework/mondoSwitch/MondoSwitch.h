@@ -35,11 +35,20 @@
   @private
     MondoSwitchButtonCALayer *buttonLayer;
     CALayer *mainLayer;
-    BOOL _on;
+    BOOL on;
+  
+    id target;
+    SEL action; 
 }
 
 @property(nonatomic, getter=isOn) BOOL on;
 
 -(void)setOn:(BOOL)on animated:(BOOL)animated;
+
+// FIXME: If an NSControl was extended instead of an NSView these definitions
+// wouldn't be required.
+@property(retain) id target;
+@property SEL action;
+
 
 @end
