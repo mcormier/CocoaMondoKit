@@ -21,7 +21,7 @@
 
 @class MondoTextField;
 
-@interface MondoTextFieldCell : NSTextFieldCell {
+@interface MondoTextFieldCell : NSTextFieldCell <NSTextFieldDelegate> {
 
 @private
   NSSize _buttonSize;

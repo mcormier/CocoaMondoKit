@@ -246,12 +246,6 @@ static NSInteger BUTTON_RIGHT_MARGIN = 2;
   [[zoomButton animator] setAlphaValue: (buttonVisible ? VISIBLE : INVISIBLE)];
 }
 
--(void)setWindowTitle:(NSString *)title {
-  [title retain];
-  [windowTitle release];
-  windowTitle = title;
-}
-
 - (NSString*) fieldLabel {
   // Window title was set in the inspector 
   // attributes.

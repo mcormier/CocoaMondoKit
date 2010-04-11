@@ -24,7 +24,7 @@
 @class MondoTextField;
 
 
-@interface MondoZoomWindowController : NSObject {
+@interface MondoZoomWindowController : NSObject <NSWindowDelegate> {
 
   IBOutlet NSPanel *zoomPanel;
   IBOutlet NSTextField *zoomTextField;

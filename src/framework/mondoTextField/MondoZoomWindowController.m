@@ -226,7 +226,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(MondoZoomWindowController);
       
   NSWindow *window = [fromField window];
   NSText *fieldEditor = [window fieldEditor:YES forObject:nil];    
-  BOOL fromFieldSelected = [fieldEditor delegate] == fromField;
+  BOOL fromFieldSelected = (MondoTextField*)[fieldEditor delegate] == fromField;
     
   NSText *mondoFieldEditor = [window fieldEditor:YES forObject:fromField];
 
