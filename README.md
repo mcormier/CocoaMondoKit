@@ -1,9 +1,9 @@
 CocoaMondoKit
 -------------
 
-CocoaMondoKit is an Interface Builder plugin. The plugin currently only 
-contains one interface  component. The Zoomable Text Field; formally 
-known as the [Mondo Text Field][1].
+CocoaMondoKit is an Interface Builder plugin. The plugin currently 
+contains two interface  components. The Zoomable Text Field; formally 
+known as the [Mondo Text Field][1], and Mondo Switch.
 
 <img align="center" src="http://mcormier.github.com/CocoaMondoKit/images/Library.png">
 
